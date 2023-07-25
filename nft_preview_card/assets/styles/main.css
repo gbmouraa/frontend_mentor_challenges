@@ -7,7 +7,7 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 62.5%;
 }
 
 *{
@@ -50,7 +50,7 @@ figure{
     position: relative;
 }
 
-figure:hover::after{
+figure::after{
     content: '';
     display: block;
     width: 100%;
@@ -59,10 +59,17 @@ figure:hover::after{
     top: 0;
     background-color:#00fff770;
     border-radius: .8rem;
-    background-image: url(images/icon-view.svg);
+    background-image: url('../images/icon-view.svg');
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .2s;
+}
+
+figure:hover::after{
+    opacity: 1;
 }
 
 figure img{
