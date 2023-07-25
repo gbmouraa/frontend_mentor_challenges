@@ -16,12 +16,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/screen-shot.png)
+![](./assets/images/screen-shot.png)
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/age_calculator](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/age_calculator)
+- Live Site URL: [https://gbmouraa-age-calculator.netlify.app/](https://gbmouraa-age-calculator.netlify.app/)
 
 ## Author
 
