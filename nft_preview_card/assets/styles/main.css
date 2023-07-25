@@ -19,8 +19,7 @@ body{
     width: 100%;
     height: 100vh;
     font-family: 'Outfit', sans-serif;
-    /* background-color: var(--main-bg-dark-bl); */
-    background-color: red;
+    background-color: var(--main-bg-dark-bl);
     display: flex;
     align-items: center;
     justify-content: center;
