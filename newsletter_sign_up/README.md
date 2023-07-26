@@ -14,16 +14,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/screen-shots/screenshot1.png)
-![](./assets/screen-shots/screenshot2.png)
-![](./assets/screen-shots/screenshot3.png)
-![](./assets/screen-shots/screenshot4.png)
-![](./assets/screen-shots/screenshot5.png)
+![](./assets/images/screenshots/screenshot1.png)
+![](./assets/images/screenshots/screenshot2.png)
+![](./assets/images/screenshots/screenshot3.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/newsletter_sign_up](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/newsletter_sign_up)
+- Live Site URL: [https://gbmouraa-newsletter-sign-up.netlify.app/](https://gbmouraa-newsletter-sign-up.netlify.app/)
+
 
 ## Author
+
 - Frontend Mentor - [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
+- Linkedin - [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
+ 
