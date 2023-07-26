@@ -1,0 +1,21 @@
+#my-balance-container {
+    background-color: $softRed;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+
+#balance {
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+    img {
+        display: block;
+    }
+}

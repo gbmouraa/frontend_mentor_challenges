@@ -1,0 +1,95 @@
+#spending-container {
+    background-color: $veryPaleOrange;
+}
+
+h1 {
+    color: $darkBrown;
+    margin-bottom: 4rem;
+}
+
+.spending-chart-container {
+    display: flex;
+    justify-content: space-between;
+    height: 22.7rem;
+    padding-bottom: 2.4rem;
+    border-bottom: .2rem solid $cream;
+}
+
+.spending-bar-box {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.2rem;
+    justify-content: end;
+    cursor: pointer;
+
+    &:hover{
+        .chart-wrapper{
+            opacity: 1;
+        }
+    }
+}
+
+.chart-title {
+    color: $mediumBrown;
+    font-size: 1.3rem;
+}
+
+.chart-wrapper{
+    color: #fff;
+    background-color: $darkBrown;
+    padding: .8rem;
+    font-size: 1.2rem;
+    border-radius: .4rem;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.bar {
+    width: 100%;
+    min-width: 3.6rem;
+    max-width: 4.6rem;
+    background-color: $softRed;
+    border-radius: .4rem;
+
+    &:hover{
+        opacity: .7;
+    }
+}
+
+.active {
+    background-color: $cyan;
+}
+
+.total-spending-container {
+    padding-top: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-month-box {
+    p {
+        color: $mediumBrown;
+    }
+
+    #total-this-month {
+        color: $darkBrown;
+        font-weight: 700;
+        font-size: 4rem;
+    }
+}
+
+.comparison-last-month-box {
+    text-align: right;
+    margin-top: auto;
+
+    p {
+        color: $darkBrown;
+        font-weight: 700;
+    }
+
+    small {
+        color: $mediumBrown;
+    }
+}

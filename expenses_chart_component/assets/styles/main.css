@@ -1,0 +1,144 @@
+#my-balance-container {
+  background-color: #ec775f;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+}
+
+#balance {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container img {
+  display: block;
+}
+
+#spending-container {
+  background-color: #fffaf5;
+}
+
+h1 {
+  color: #382314;
+  margin-bottom: 4rem;
+}
+
+.spending-chart-container {
+  display: flex;
+  justify-content: space-between;
+  height: 22.7rem;
+  padding-bottom: 2.4rem;
+  border-bottom: 0.2rem solid #f8e9dd;
+}
+
+.spending-bar-box {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.2rem;
+  justify-content: end;
+  cursor: pointer;
+}
+.spending-bar-box:hover .chart-wrapper {
+  opacity: 1;
+}
+
+.chart-title {
+  color: #93867b;
+  font-size: 1.3rem;
+}
+
+.chart-wrapper {
+  color: #fff;
+  background-color: #382314;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.bar {
+  width: 100%;
+  min-width: 3.6rem;
+  max-width: 4.6rem;
+  background-color: #ec775f;
+  border-radius: 0.4rem;
+}
+.bar:hover {
+  opacity: 0.7;
+}
+
+.active {
+  background-color: #76b5bc;
+}
+
+.total-spending-container {
+  padding-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-month-box p {
+  color: #93867b;
+}
+.total-month-box #total-this-month {
+  color: #382314;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.comparison-last-month-box {
+  text-align: right;
+  margin-top: auto;
+}
+.comparison-last-month-box p {
+  color: #382314;
+  font-weight: 700;
+}
+.comparison-last-month-box small {
+  color: #93867b;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f8e9dd;
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+}
+
+main {
+  padding: 0 1.6rem;
+  width: 100%;
+  max-width: 52rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+
+#my-balance-container,
+#spending-container {
+  width: 100%;
+  border-radius: 1.2rem;
+  padding: 2.2rem;
+  font-size: 1.8rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png">
+    <title>Expenses Chart</title>
+</head>
+
+<body>
+    <main>
+        <header id="my-balance-container">
+            <div class="my-balance">
+                <p>My balance</p>
+                <p id="balance">$921.48</p>
+            </div>
+            <div class="logo-container">
+                <img src="assets/images/logo.svg" alt="Logo">
+            </div>
+        </header>
+        <section id="spending-container">
+            <h1>Spending - Last 7 days</h1>
+            <section class="spending-chart-container">
+            </section>
+            <section class="total-spending-container">
+                <div class="total-month-box">
+                    <p>Total this month</p>
+                    <p id="total-this-month">$478.33</p>
+                </div>
+                <div class="comparison-last-month-box">
+                    <p class="comparison-result">+2.4%</p>
+                    <small>from last month</small>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <script src="assets/script/index.js"></script>
+    </footer>
+</body>
+
+</html>
