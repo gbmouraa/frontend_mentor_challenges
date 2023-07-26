@@ -1,0 +1,119 @@
+@import '_colors';
+@import '_mixins';
+
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        figure,
+        .content {
+            width: 50%;
+            text-align: left;
+        }
+    }
+}
+
+.revert-order {
+    figure {
+        order: 1;
+    }
+}
+
+figure img {
+    display: block;
+    height: 100%;
+}
+
+.content {
+    text-align: center;
+    padding: 5rem 1.6rem;
+
+    @include responsive(lg) {
+        padding: 8%;
+    }
+}
+
+.content h3 {
+    font-size: 3.2rem;
+    color: $veryDarkDesaturatedBlue;
+    font-weight: 900;
+}
+
+.content p {
+    color: $darkGrayishBlue;
+    padding: 3.2rem 0;
+    line-height: 1.5;
+}
+
+#yellow-link,
+#red-link {
+    color: $veryDarkDesaturatedBlue;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+#yellow-link {
+    @include linkDecoration($yellow);
+}
+
+#red-link {
+    @include linkDecoration($softRed);
+}
+
+// --------
+
+.bg-section {
+    padding-top: 100%;
+
+    @include responsive(md) {
+        padding-top: 0;
+        min-height: 50rem;
+        position: relative;
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+.bg-section .content p {
+    padding-bottom: 0;
+}
+
+.graphic-design {
+    @include coloredSection(url('../images/mobile/image-graphic-design.jpg'),
+        $darkDesaturatedCyan);
+
+    @include responsive(md) {
+        @include coloredSection(url('../images/desktop/image-graphic-design.jpg'),
+            $darkDesaturatedCyan)
+    }
+}
+
+.photography {
+    @include coloredSection(url('../images/mobile/image-photography.jpg'),
+        $darkBlue);
+
+    @include responsive(md) {
+        @include coloredSection(url('../images/desktop/image-photography.jpg'),
+            $darkBlue)
+    }
+}
+
+.bg-sections-container {
+    @include responsive(md) {
+        display: flex;
+    }
+}

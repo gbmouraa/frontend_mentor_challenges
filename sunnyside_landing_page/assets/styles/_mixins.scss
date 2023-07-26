@@ -1,0 +1,44 @@
+@mixin linkDecoration($color){
+    &:hover::before{
+        opacity: 1;
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        width: calc(100% + .8rem);
+        height: .6rem;
+        background: $color;
+        border-radius: .4rem;
+        position: absolute;
+        left: -.4rem;
+        bottom: 0;
+        opacity: .3;
+        z-index: -1;
+        transition-property: opacity;
+        transition-duration: .3s;
+    }
+}
+
+@mixin coloredSection($bgImage,$color){
+    background-image: $bgImage;
+    background-position: center top;
+    background-size: cover;
+
+    p,
+    h3 {
+        color: $color;
+    }
+}
+
+@mixin responsive($screen){
+    @if $screen == md {
+        @media screen and (min-width:750px){
+            @content;
+        }
+    }@else if $screen == lg {
+        @media screen and (min-width:1000px){
+            @content;
+        }
+    }
+}

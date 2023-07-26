@@ -1,0 +1,98 @@
+@import '_colors';
+@import '_header';
+@import '_sections';
+@import '_clients';
+@import '_gallery';
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+main,
+header,
+section,
+footer,
+figure,
+img {
+    width: 100%;
+}
+
+main{
+    max-width: 120rem;
+    margin: auto;
+}
+
+.fraunces-font {
+    font-family: 'Fraunces', serif;
+}
+
+img[desktop-image],
+.desktop-gallery {
+    display: none;
+    @include responsive(md){
+        display: block;
+    }
+}
+
+img[mobile-image]{
+    @include responsive(md){
+        display: none;
+    }
+}
+
+footer{
+    background: $footerBg;
+    padding: 2.6rem 1.6rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .logo{
+    justify-content: center;
+    padding: 2.4rem 0;
+    img{
+        width: 15rem;
+    }
+}
+
+footer ul{
+    padding-top: 2.4rem;
+    list-style-type: none;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    max-width: 37rem;
+    text-align: center;
+
+    li{
+        flex-grow: 1;
+        color:$darkModerateCyan;
+        transition: color .3s;
+        cursor: pointer;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+.social-medias-ul{
+    max-width: 20rem;
+    font-size: 2.2rem;
+    padding-top: 7rem;
+}

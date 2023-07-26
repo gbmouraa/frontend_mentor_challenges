@@ -1,0 +1,15 @@
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    img{
+        display: block;
+    }
+}
+
+.gallery-container{
+    @include responsive(md){
+        display: flex;
+        max-width: 120rem;
+    }
+}

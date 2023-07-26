@@ -1,0 +1,71 @@
+@import '_colors';
+@import '_mixins';
+
+.clients-testimonials-section {
+    padding: 5rem 1.6rem;
+    text-align: center;
+
+    h4 {
+        text-transform: uppercase;
+        color: $darkGrayishBlue;
+        letter-spacing: .4rem;
+        font-size: 1.8rem;
+    }
+
+    @include responsive(lg) {
+        padding: 10rem 0;
+    }
+}
+
+.client-testimonials-container {
+    display: flex;
+    padding-top: 7rem;
+    row-gap: 7rem;
+    column-gap: 7rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include responsive(lg) {
+        column-gap: 0;
+        flex-wrap: nowrap;
+    }
+}
+
+.client-testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.4rem;
+    max-width: 40rem;
+    min-width: 32.6rem;
+
+    p {
+        line-height: 1.5;
+        color: $veryDarkGrayishBlue;
+    }
+
+    @include responsive(lg) {
+        padding: 0 1.6rem;
+    }
+}
+
+.client-testimonial>* {
+    display: block;
+}
+
+.client-testimonial img {
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.client-testimonial .client-name {
+    font-weight: 900;
+    color: $veryDarkDesaturatedBlue;
+}
+
+.client-name small {
+    display: block;
+    color: $grayishBlue;
+    font-family: 'Barlow', sans-serif;
+    padding-top: .8rem;
+}

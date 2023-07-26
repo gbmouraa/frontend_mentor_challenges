@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png">
+    <title>Sunnyside</title>
+</head>
+
+<body>
+    <main>
+        <header id="header">
+            <div class="logo">
+                <img src="./assets/images/logo.svg" alt="Sunnyside logo">
+                <button class="burger" onclick="toggleMenu()"></button>
+            </div>
+            <nav>
+                <ul class="nav-ul">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact" class="fraunces-font">Contact</a></li>
+                </ul>
+            </nav>
+            <h1 class="fraunces-font">WE ARE CREATIVES
+                <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+            </h1>
+        </header>
+        <section class="revert-order">
+            <figure>
+                <img src="./assets/images/mobile/image-transform.jpg" alt="Illustration" mobile-image>
+                <img src="./assets/images/desktop/image-transform.jpg" alt="Illustration" desktop-image>
+            </figure>
+            <article class="content">
+                <h3 class="fraunces-font">Transform your brand</h3>
+                <p>We are a full-service creative agency specializing in helping brands grow fast.
+                    Engage your clients through compelling visuals that do most of the marketing for you.
+                </p>
+                <a href="#" class="fraunces-font" id="yellow-link">Learn More</a>
+            </article>
+        </section>
+        <section>
+            <figure>
+                <img src="./assets/images/mobile/image-stand-out.jpg" alt="Illustration" mobile-image>
+                <img src="./assets/images/desktop/image-stand-out.jpg" alt="Illustration" desktop-image>
+            </figure>
+            <article class="content">
+                <h3 class="fraunces-font">Stand out to the right audience</h3>
+                <p>Using a collaborative formula od of designers,reseachers, photographers,
+                    videographers, and copywriters, we'll build and extend your brand in digital places.
+                </p>
+                <a href="#" class="fraunces-font" id="red-link">Learn More</a>
+            </article>
+        </section>
+        <div class="bg-sections-container">
+            <section class="bg-section graphic-design">
+                <div class="content">
+                    <h3 class="fraunces-font">Graphic design</h3>
+                    <p>Great design makes you memorable. We deliver artwork that underscores your brand message and
+                        captures
+                        potential clients’ attention.</p>
+                </div>
+            </section>
+            <section class="bg-section photography">
+                <div class="content">
+                    <h3 class="fraunces-font">Photography</h3>
+                    <p> Increase your credibility by getting the most stunning, high-quality photos that improve your
+                        business
+                        image.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <section class="clients-testimonials-section">
+            <h4 class="fraunces-font">Client testimonials</h4>
+            <div class="client-testimonials-container">
+                <div class="client-testimonial">
+                    <img src="./assets/images/image-emily.jpg" alt="Client image">
+                    <p> We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines
+                        were
+                        always hit.
+                    </p>
+                    <p class="client-name fraunces-font">Emily R. <small>Marketing Director</small></p>
+                </div>
+                <div class="client-testimonial">
+                    <img src="./assets/images/image-thomas.jpg" alt="Client image">
+                    <p> Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a
+                        satisfying and
+                        enjoyable experience.
+                    </p>
+                    <p class="client-name fraunces-font">Thomas S. <small>Chief Operating Officer</small></p>
+                </div>
+                <div class="client-testimonial">
+                    <img src="./assets/images/image-jennie.jpg" alt="Client image">
+                    <p> Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly
+                        recommended!
+                    </p>
+                    <p class="client-name fraunces-font">Jennie F. <small>Business Owner</small></p>
+                </div>
+            </div>
+        </section>
+        <section class="galllery-section">
+            <div class="gallery-container">
+                <div class="image-container">
+                    <img src="./assets/images/mobile/image-gallery-milkbottles.jpg" alt="Illustration">
+                </div>
+                <div class="image-container">
+                    <img src="./assets/images/mobile/image-gallery-orange.jpg" alt="Illustration">
+                </div>
+                <div class="image-container">
+                    <img src="./assets/images/mobile/image-gallery-cone.jpg" alt="Illustration">
+                </div>
+                <div class="image-container">
+                    <img src="./assets/images/mobile/image-gallery-sugar-cubes.jpg" alt="Illustration">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="logo">
+                <img src="./assets/images/logo.svg" alt="Sunnyside logo">
+            </div>
+            <ul>
+                <li>About</li>
+                <li>Services</li>
+                <li>Projects</li>
+            </ul>
+            <ul class="social-medias-ul">
+                <li><ion-icon name="logo-facebook"></ion-icon></li>
+                <li><ion-icon name="logo-twitter"></ion-icon></li>
+                <li><ion-icon name="logo-instagram"></ion-icon></li>
+                <li><ion-icon name="logo-pinterest"></ion-icon></li>
+            </ul>
+            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+            <script>
+                const toggleMenu = () => {
+                    document.body.classList.toggle('open')
+                }
+            </script>
+        </footer>
+    </main>
+</body>
+
+<desktop

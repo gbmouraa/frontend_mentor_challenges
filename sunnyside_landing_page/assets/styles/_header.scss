@@ -1,0 +1,157 @@
+@import '_colors';
+@import '_mixins';
+
+#header {
+    background-image: url('../images/mobile/image-header.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    min-height: 60rem;
+
+    @include responsive(md){
+        background-image: url('../images/desktop/image-header.jpg');
+        position: relative;
+        // min-height: 90rem;
+    }
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem;
+
+    img {
+        width: auto;
+    }
+
+    @include responsive(md){
+        width: fit-content;
+        padding: 3.6rem 0 2.4rem 4.6rem;
+    }
+}
+
+// nav starts here
+button.burger {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+    background-image: url('../images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2.4rem;
+    height: 2rem;
+    transition-property: opacity;
+    transition-duration: .3s;
+    @include responsive(md){
+        display: none;
+    }
+}
+
+header nav {
+    padding: 0 2.4rem;
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2.6rem;
+    clip-path: polygon(94% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+    background-color: #fff;
+    list-style: none;
+    padding: 5.4rem 0 2.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: .3s;
+    position: absolute;
+    width: calc(100% - 4.8rem);
+    z-index: 100;
+}
+
+
+.nav-ul li a {
+    text-decoration: none;
+    color: $veryDarkGrayishBlue;
+    display: block;
+    font-size: 1.6rem;
+    transition: all .3s;
+
+    &:hover {
+        color: $veryDarkDesaturatedBlue;
+    }
+    @include responsive(md){
+        color: #fff;
+    }
+}
+
+.nav-ul li a[href='#contact'] {
+    color: $veryDarkDesaturatedBlue;
+    padding: 1.2rem 1.8rem;
+    background-color: $yellow;
+    border-radius: 2.6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    &:hover {
+        color: #fff;
+        background-color: $darkBlue;
+    }
+
+    @include responsive(md){
+        background-color: #fff;
+    }
+}
+
+.nav-ul{
+    @include responsive(md){
+        opacity: 1;
+        right: 4.6rem;
+        top: 2.4rem;
+        width: fit-content;
+        visibility: visible;
+        clip-path: none;
+        flex-direction: row;
+        padding: 0;
+        background: transparent;
+        column-gap: 2.4rem;
+    }
+}
+
+body.open {
+    .nav-ul {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .burger {
+        opacity: .5;
+    }
+}
+
+// ------ end
+
+header h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: .6rem;
+    margin-top: 7rem;
+    position: relative;
+
+    @include responsive(md){
+        font-size: 5.2rem;
+    }
+}
+
+header h1 img{
+    width: 3.4rem;
+    position: absolute;
+    left: 50%;
+    bottom: -15rem;
+    transform: translateX(-50%);
+}
