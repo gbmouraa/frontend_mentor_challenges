@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/gbmouraa/expenses_chart](https://github.com/gbmouraa/expenses_chart)
-- Live Site URL: [https://gbmouraa.github.io/expenses_chart/](https://gbmouraa.github.io/expenses_chart/)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/expenses_chart_component](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/expenses_chart_component)
+- Live Site URL: [https://gbmouraa-expenses-chart.netlify.app/](https://gbmouraa-expenses-chart.netlify.app/)
 
 ### Built with
 
