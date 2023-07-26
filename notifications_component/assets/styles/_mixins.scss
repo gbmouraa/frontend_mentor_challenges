@@ -1,0 +1,15 @@
+@mixin hoverBlue(){
+    transition: all .2s;
+    &:hover{
+        color: $blue;
+        cursor: pointer;
+    }
+}
+
+@mixin responsive($screen){
+    @if $screen == md {
+        @media screen and (min-width: 670px){
+            @content;
+        }
+    }
+}
