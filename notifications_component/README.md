@@ -13,8 +13,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/gbmouraa/notification_page](https://github.com/gbmouraa/notification_page)
-- Live Site URL: [https://gbmouraa.github.io/notification_page/](https://gbmouraa.github.io/notification_page/)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/notifications_component](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/notifications_component)
+- Live Site URL: [https://gbmouraa-notifications-component.netlify.app/](https://gbmouraa-notifications-component.netlify.app/)
 
 ### Built with
 
