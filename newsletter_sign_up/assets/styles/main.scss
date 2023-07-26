@@ -1,0 +1,274 @@
+// colors
+$tomato: hsl(4, 100%, 67%);
+$darkSlateGrey: hsl(234, 29%, 20%);
+$charcoalGrey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+// -------------------------------------
+@mixin responsive($screen) {
+    @if $screen ==md {
+        @media screen and (min-width: 920px) {
+            @content;
+        }
+    }
+
+    @else if($screen ==sm) {
+        @media screen and (min-width:500px) {
+            @content;
+        }
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+
+    @include responsive(md) {
+        background-color: $charcoalGrey;
+        align-items: center;
+    }
+}
+
+p {
+    font-size: 1.6rem;
+    color: #000;
+}
+
+// -------------------------------------
+
+.card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(md) {
+        flex-direction: row-reverse;
+        height: 59rem;
+        padding: 2.4rem;
+        width: 87rem;
+        border-radius: 2.8rem;
+    }
+}
+
+.image-container,
+.sign-up-container,
+.successful-subscription {
+    width: 100%;
+}
+
+// -------------------------------------
+
+.image-container img {
+    width: 100%;
+
+    @include responsive(md) {
+        width: fit-content;
+    }
+}
+
+.image-container {
+    text-align: right;
+}
+
+.mobile-img {
+    @include responsive(md) {
+        display: none;
+    }
+}
+
+.desktop-img {
+    height: 54.2rem;
+    display: none;
+
+    @include responsive(md) {
+        display: inline;
+    }
+}
+
+// -------------------------------------
+.sign-up-container {
+    padding: 2.4rem;
+}
+
+.title {
+    h1 {
+        color: $darkSlateGrey;
+        font-size: 3.6rem;
+
+        @include responsive(md) {
+            font-size: 5.4rem;
+        }
+    }
+
+    p {
+        padding-top: 1.6rem;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 2.4rem 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.4rem;
+
+    li {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: flex-start;
+        color: $darkSlateGrey;
+        line-height: 1.6;
+    }
+
+    img {
+        padding: .4rem 1.6rem 0 0;
+    }
+}
+
+// -------------------------------------
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 0;
+}
+
+form>*,
+.email-label>* {
+    display: block;
+}
+
+.email-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+}
+
+label[for="email"] {
+    color: $darkSlateGrey;
+}
+
+.invalid-email-msg {
+    color: $tomato;
+}
+
+input[name="email"] {
+    width: 100%;
+    padding: 1.6rem 0 1.6rem 1.6rem;
+    font-size: 1.6rem;
+    outline: none;
+    border-radius: .8rem;
+}
+
+.normal-state {
+    border: 1px solid $grey;
+    background-color: #fff;
+    outline: none;
+
+    &:focus {
+        border-color: $darkSlateGrey;
+    }
+}
+
+.invalid-state {
+    outline: none;
+    border: 1px solid $tomato;
+    background-color: #ff634734;
+    color: #ff6347;
+
+    &:focus {
+        border-color: $tomato;
+    }
+}
+
+button {
+    margin-top: 2.4rem;
+    padding: 1.7rem 0;
+    width: 100%;
+    font-size: 1.6rem;
+    color: $white;
+    background-color: $darkSlateGrey;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: .8rem;
+
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(90deg, rgba(255, 87, 87, 1) 7%, rgba(255, 87, 106, 1) 37%, rgba(252, 151, 69, 1) 100%);
+        box-shadow: hsla(4, 100%, 67%, 0.616) 0px 7px 29px 0px;
+    }
+}
+
+.successful-subscription {
+    display: flex;
+    flex-direction: column;
+    padding: 20rem 2.4rem 2.4rem 2.4rem;
+    position: relative;
+    background-color: #fff;
+
+    @include responsive(sm) {
+        width: 42rem;
+        margin: auto;
+        border-radius: 2.8rem;
+        padding: 4.8rem;
+    }
+
+    h2 {
+        font-size: 4.2rem;
+        color: $darkSlateGrey;
+        line-height: 1;
+        padding: 4.8rem 2.4rem 0 0;
+
+        @include responsive(sm) {
+            padding: 2.4rem 0;
+            font-size: 4.8rem;
+        }
+    }
+
+    p {
+        padding: 2.4rem 0;
+        line-height: 1.4;
+
+        @include responsive(sm) {
+            padding-top: 0;
+        }
+    }
+}
+
+.successful-subscription>* {
+    display: block;
+}
+
+.btn2 {
+    width: calc(100% - 48px);
+    position: absolute;
+    bottom: 4.8rem;
+    left: 2.4rem;
+
+    @include responsive(sm) {
+        position: static;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.js-no-display {
+    display: none;
+}
