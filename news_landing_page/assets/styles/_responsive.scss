@@ -1,0 +1,13 @@
+@mixin responsive($screen){
+    // medium
+    @if $screen == md {
+        @media screen and (min-width: 629px){
+            @content;
+        }
+        // large
+    } @else if $screen == lg{
+        @media screen and (min-width:1399px){
+            @content;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png">
+    <title>News</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="./assets/images/logo.svg" alt="Logo">
+        </div>
+        <div class="hamburguer-menu">
+            <img src="./assets/images/icon-menu.svg" alt="Open menu" id="open-menu" onclick="showMenu()">
+        </div>
+        <nav>
+            <ul class="nav-ul js-no-display">
+                <img src="./assets/images/icon-menu-close.svg" alt="Close menu" id="close-menu" onclick="showMenu()">
+                <li onclick="hideMenu()"><a href="#home">Home</a></li>
+                <li onclick="hideMenu()"><a href="#new">New</a></li>
+                <li onclick="hideMenu()"><a href="#">Popular</a></li>
+                <li onclick="hideMenu()"><a href="#trending">Trending</a></li>
+                <li onclick="hideMenu()"><a href="#">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="home-image">
+                <img src="./assets/images/image-web-3-mobile.jpg" alt="Banner image" class="mobile-img">
+                <img src="./assets/images/image-web-3-desktop.jpg" alt="Banner image" class="desktop-img">
+            </div>
+        </section>
+        <div class="web3-topic">
+            <h1>The Bright Future of Web 3.0?</h1>
+        </div>
+        <div class="text">
+            <p>We dive into the next evolution of the web that claims to put the power of the platforms back
+                into the hands of the people. But is it really fulfilling its promisse?</p>
+            <a href="#" class="read-more-link">Read more</a>
+        </div>
+        <aside id="new">
+            <h2>New</h2>
+            <article>
+                <span class="article-title">Hydrogen VS Electric Cars</span>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </article>
+            <article>
+                <span class="article-title">The Downsides of AI Artistry</span>
+                <p>What are the possible adverse effects of on-demand AI image generation?</p>
+            </article>
+            <article>
+                <span class="article-title">Is VC Funding Drying Up?</span>
+                <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </article>
+        </aside>
+        <section id="trending">
+            <article class="trending-article">
+                <div class="trending-img-container">
+                    <img src="./assets/images/image-retro-pcs.jpg" alt="Trending image">
+                </div>
+                <div class="trending-content">
+                    <span class="trending-position">01</span>
+                    <span class="trending-title">Reviving Retro Pcs</span>
+                    <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </article>
+            <article class="trending-article">
+                <div class="trending-img-container">
+                    <img src="./assets/images/image-top-laptops.jpg" alt="Trending image">
+                </div>
+                <div class="trending-content">
+                    <span class="trending-position">02</span>
+                    <span class="trending-title">Top 10 Laptops of 2022</span>
+                    <p>Our best picks for various needs and budgets.</p>
+                </div>
+            </article>
+            <article class="trending-article">
+                <div class="trending-img-container">
+                    <img src="./assets/images/image-gaming-growth.jpg" alt="Trending image">
+                </div>
+                <div class="trending-content">
+                    <span class="trending-position">03</span>
+                    <span class="trending-title">The Growth of Gaming</span>
+                    <p>How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <script src="./assets/script/script.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+@import '_responsive';
+// colors
+$softOrange: hsl(35, 77%, 62%);
+$softRed: hsl(5, 85%, 63%);
+$off-white: hsl(36, 100%, 99%);
+$grayishBlue: hsl(233, 8%, 79%);
+$darkGrayishBlue: hsl(236, 13%, 42%);
+$veryDarkBlue: hsl(240, 100%, 5%);
+
+// ----------------------------------------
+html {
+    // more easy to use rem property :)
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin titlesHover($color) {
+    transition: all .4s ease;
+
+    &:hover {
+        color: $color;
+        cursor: pointer;
+    }
+}
+
+// --------------------------------
+// js classes
+.js-no-display {
+    display: none;
+
+    @include responsive(md) {
+        display: block;
+    }
+}
+
+.js-body-disfocus {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .6;
+        z-index: 1;
+    }
+}
+
+.js-nav-active {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    width: 68%;
+    height: 100vh;
+    padding-top: 9rem;
+    padding-left: 2.4rem;
+    z-index: 10;
+
+    li {
+        padding: 1.2rem 0;
+
+        a {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include responsive(md){
+        display: flex;
+        flex-direction: column;
+        #close-menu{
+            display: block;
+        }
+    }
+}
+
+// ------------------------------------------
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 0;
+    padding: 2.4rem 1.6rem;
+
+    @include responsive(md) {
+        justify-content: space-between;
+        max-width: 100rem;
+    }
+}
+
+.header-logo img {
+    width: 5rem;
+}
+
+.hamburguer-menu {
+    position: absolute;
+    right: 1.6rem;
+
+    @include responsive(md) {
+        display: none;
+    }
+}
+
+#close-menu {
+    position: absolute;
+    top: 2.4rem;
+    right: 1.6rem;
+
+    @include responsive(md) {
+        display: none;
+    }
+}
+
+#open-menu,#close-menu{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+// ---------------------------
+.nav-ul {
+    list-style-type: none;
+
+    @include responsive(md) {
+        display: flex;
+        column-gap: 2.8rem;
+        font-size: 1.6rem
+    }
+}
+
+.nav-ul li a {
+    @include titlesHover($softRed);
+    text-decoration: none;
+    color: $veryDarkBlue;
+}
+
+// ----------------------------------
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    padding: 0 1.6rem;
+    max-width: 100rem;
+}
+
+// ----------------------------------
+.home-image img {
+    width: 100%;
+}
+
+.mobile-img {
+    @include responsive(md) {
+        display: none;
+    }
+}
+
+.desktop-img {
+    display: none;
+
+    @include responsive(md) {
+        display: inline;
+    }
+}
+
+.web3-topic h1 {
+    color: $veryDarkBlue;
+    font-weight: 800;
+    font-size: 3.8rem;
+    line-height: 1;
+}
+
+.text p {
+    color: $darkGrayishBlue;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.read-more-link {
+    display: inline-block;
+    color: #fff;
+    background-color: $softRed;
+    padding: 1.4rem 2.8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    transition: all .4s ease;
+
+    &:hover {
+        background-color: $veryDarkBlue;
+    }
+}
+
+// ----------------------------------------
+#new {
+    background-color: $veryDarkBlue;
+    padding: 2.4rem;
+
+    h2 {
+        color: $softOrange;
+        font-size: 2.8rem;
+    }
+
+    p {
+        color: $grayishBlue;
+        font-size: 1.4rem;
+    }
+}
+
+#new article {
+    padding: 3.2rem 0;
+}
+
+#new article:nth-child(3) {
+    border-bottom: 2px solid $darkGrayishBlue;
+    border-top: 2px solid $darkGrayishBlue;
+}
+
+#new article:nth-child(4) {
+    padding-bottom: 0;
+}
+
+.article-title {
+    @include titlesHover($softOrange);
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding-bottom: 1.2rem;
+}
+
+// ----------------------------------------
+#trending {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    padding: 2.4rem 0;
+}
+
+.trending-article {
+    display: flex;
+    column-gap: 1.6rem;
+}
+
+.trending-img-container img {
+    width: 10rem;
+}
+
+.trending-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-content p {
+    font-size: 1.4rem;
+    color: $darkGrayishBlue;
+    line-height: 1.8;
+}
+
+.trending-position {
+    font-size: 2.8rem;
+    color: $grayishBlue;
+    font-weight: 700;
+}
+
+.trending-title {
+    @include titlesHover($softRed);
+    font-size: 1.6rem;
+    color: $veryDarkBlue;
+    font-weight: 800;
+    padding: .8rem 0;
+}
+
+// ----------------------------
+@include responsive(lg) {
+    header {
+        max-width: 120rem;
+        padding: 2.4rem 0;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 36rem;
+        grid-template-rows: repeat(2, 1fr), 20rem;
+        grid-template-areas:
+            'banner banner news'
+            'title  text news'
+            'trending trending trending';
+        gap: 2.4rem;
+        max-width: 120rem;
+        padding: 0;
+    }
+
+    #home {
+        grid-area: banner;
+    }
+
+    .web3-topic {
+        grid-area: title;
+
+        h1 {
+            font-size: 6.8rem;
+        }
+    }
+
+    .text {
+        grid-area: text;
+        position: relative;
+    }
+
+    .read-more-link {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+    }
+
+    #new {
+        grid-area: news;
+
+        h2 {
+            font-size: 4.2rem;
+        }
+    }
+
+    #new article {
+        line-height: 1.6;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+
+    #trending {
+        grid-area: trending;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .trending-article {
+        max-width: 36rem;
+    }
+}
