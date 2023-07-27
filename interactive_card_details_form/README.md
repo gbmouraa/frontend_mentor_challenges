@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/gbmouraa/interactive_card_details_form/tree/script](https://github.com/gbmouraa/interactive_card_details_form/tree/script)
-- Live Site URL: [https://gbmouraa.github.io/interactive_card_details_form/](https://gbmouraa.github.io/interactive_card_details_form/)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/interactive_card_details_form](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/interactive_card_details_form)
+- Live Site URL: [https://gbmoura-interactive-card-details-form.netlify.app/](https://gbmoura-interactive-card-details-form.netlify.app/)
 
 ### Built with
 
