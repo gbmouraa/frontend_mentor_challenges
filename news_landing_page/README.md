@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/news_landing_page](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/news_landing_page)
+- Live Site URL: [https://gbmoura-news-page.netlify.app/](https://gbmoura-news-page.netlify.app/)
 
 ### Built with
 
