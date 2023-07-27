@@ -1,0 +1,26 @@
+@mixin responsive($screen) {
+    @if $screen ==md {
+        @media screen and (min-width:376px) and (max-width:1099px) {
+            @content;
+        }
+    }
+
+    @else if $screen ==lg {
+        @media screen and (min-width:1100px) {
+            @content;
+        }
+    }
+}
+
+@mixin cardBg($bg1, $bg2) {
+    background-size: cover;
+    background-image: $bg1;
+
+    @include responsive(md) {
+        background-image: $bg2;
+    }
+
+    @include responsive(lg){
+        background-image: $bg2;
+    }
+}

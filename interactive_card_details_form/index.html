@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <link rel="icon" href="assets/images/favicon-32x32.png">
+  <title>Interactive card</title>
+</head>
+
+<body>
+  <main>
+    <section class="cards">
+      <div class="card-content">
+        <div class="card-front">
+          <div class="card-icon">
+            <img src="./assets/images/card-logo.svg" alt="card logo">
+          </div>
+          <div class="card-number">
+            <span class="span-number">0000 0000 0000 0000</span>
+          </div>
+          <div class="cardholder">
+            <span class="cardholder-name">JANE APPLESEED</span>
+            <p><span class="expiration-month">00</span>/<span class="expiration-year">00</span></p>
+          </div>
+        </div>
+        <div class="card-back">
+          <img src="./assets/images/bg-card-back.png" alt="Card back">
+          <span class="cvc">000</span>
+        </div>
+      </div>
+    </section>
+    <section class="card-data">
+      <form>
+        <fieldset>
+          <label for="name">Cardholder name</label>
+          <input type="text" id="name" placeholder="e.g. Jane Appleseed" oninput="addCardName()">
+          <small></small>
+        </fieldset>
+        <fieldset>
+          <label for="number">Card number</label>
+          <input type="number" id="number" placeholder="e.g. 1234 5678 9123 0000" oninput="validateCardNumber()">
+          <small></small>
+        </fieldset>
+        <div class="flex-inputs">
+          <fieldset class="flex-fieldset">
+            <label for="month">Exp. date (MM/YY)</label>
+            <input type="number" id="month" placeholder="MM" oninput="addCardExpirationDate()">
+            <input type="number" id="year" placeholder="YY" oninput="addCardExpirationDate()">
+            <small></small>
+          </fieldset>
+          <fieldset>
+            <label for="cvc">Cvc</label>
+            <input type="number" id="cvc" placeholder="e.g 123" oninput="addCvc()">
+            <small></small>
+          </fieldset>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </section>
+    <section class="success" style="display: none;">
+      <div class="msg">
+        <img src="./assets/images/icon-complete.svg" alt="icon complete">
+        <h2>Thank You!</h2>
+        <p>We've added your card details</p>
+        <button onclick="reload()">Continue</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <script src="./assets/script/jQuery.js"></script>
+    <script src="./assets/script/index.js"></script>
+  </footer>
+</body>
+
+</html>
