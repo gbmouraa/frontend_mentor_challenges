@@ -1,0 +1,15 @@
+@mixin iconHover($color){
+    transition: all .2s;
+    &:hover{
+        color: $color;
+        cursor: pointer;
+    }
+}
+
+@mixin linkHover($bgColor){
+    transition: all .2s;
+    &:hover{
+        background-color: $bgColor;
+        cursor: pointer;
+    }
+}

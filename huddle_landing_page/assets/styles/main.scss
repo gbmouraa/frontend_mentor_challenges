@@ -1,0 +1,479 @@
+@import '_sectionBg';
+@import '_responsive';
+@import '_hovers';
+
+@font-face {
+    font-family: 'Cocogoose';
+    src: url(./Cocogoose\ Pro\ Regular\ Trial.ttf) format('truetype')
+}
+
+html {
+    // this makes more easy to use rem
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+// colors
+
+// primary
+$pink: hsl(322, 100%, 66%);
+$lightPink: hsl(321, 100%, 78%);
+$lightRed: hsl(0, 100%, 63%);
+
+// neutral
+$veryDarkCyan: hsl(192, 100%, 9%);
+$veryPaleBlue: hsl(207, 100%, 98%);
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: $veryDarkCyan;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    padding: 2.4rem 1.6rem 0;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    margin: auto;
+}
+
+.pad24 {
+    padding: 0 2.4rem;
+}
+
+.subscribe-btn, .main-link a{
+    @include linkHover($lightPink);
+}
+
+.huddle-logo-container {
+    width: 13rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+.header-link-container {
+    width: 9rem;
+
+    a {
+        display: inline-block;
+        width: 100%;
+        color: $pink ;
+        text-align: center;
+        border: 1px solid $pink;
+        border-radius: 1.6rem;
+        padding: .6rem 0;
+        font-size: 1.2rem;
+    }
+}
+
+.banner-text {
+    text-align: center;
+    padding-top: 10rem;
+
+    h1 {
+        font-size: 2.4rem;
+        padding-bottom: 2.4rem;
+
+        @include responsive(lg) {
+            font-size: 3.2rem;
+        }
+    }
+
+    p {
+        display: inline-block;
+        width: 100%;
+        max-width: 45rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
+
+.main-link {
+    text-align: center;
+    padding-top: 3.8rem;
+
+    a {
+        display: block;
+        width: 22rem;
+        background-color: $pink;
+        margin: auto;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #fff;
+        padding: 1.2rem 0;
+        border-radius: 2.4rem;
+        
+    }
+}
+
+.mockup-container {
+    padding-top: 9rem;
+    width: 100%;
+    max-width: 90rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    img {
+        width: 100%;
+        max-width: 80rem;
+        display: inline-block;
+    }
+}
+
+.numbers-container {
+    padding-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 9rem;
+
+    @include responsive(lg) {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 30rem;
+    }
+}
+
+.statistics {
+    display: flex;
+    flex-direction: column;
+
+    span,
+    small {
+        display: block;
+    }
+
+    small {
+        text-align: center;
+        font-size: 1.6rem;
+        color: #8d8d8d;
+    }
+}
+
+.number-logos {
+    width: 3.6rem;
+    text-align: left;
+}
+
+.large-number {
+    font-size: 7.2rem;
+    font-weight: 700;
+}
+
+.section-bg1 {
+    @include sectionBg(13.5rem, url(../images/bg-section-top-mobile-1.svg), 7rem, url(../images/bg-section-bottom-mobile-1.svg));
+
+    @include responsive(md) {
+        &::before {
+            background-image: url(../images/bg-section-top-desktop-1.svg);
+        }
+
+        &::after {
+            background-image: url(../images/bg-section-bottom-desktop-1.svg);
+        }
+    }
+}
+
+.section-bg1>div,
+.section-bg2>div {
+    background-color: $veryPaleBlue;
+}
+
+.section-container>div {
+    display: flex;
+    justify-content: center;
+}
+
+.section-content {
+    max-width: 210rem;
+
+    @include responsive(lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10rem;
+    }
+}
+
+.section-text {
+    padding: 0 3rem 5rem 3rem;
+    text-align: center;
+
+    h3 {
+        font-size: 2.2rem;
+        padding-bottom: 1.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        font-weight: 600;
+        max-width: 50rem;
+        display: inline-block;
+        margin: auto;
+    }
+
+    @include responsive(lg) {
+        width: 50%;
+        order: 1;
+        text-align: left;
+
+        h3 {
+            font-size: 2.8rem;
+        }
+
+    }
+}
+
+.section-image {
+    width: 100%;
+    padding: 8rem 3rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        max-width: 50rem;
+    }
+
+    @include responsive(lg) {
+        width: 50%;
+        order: 2;
+        padding: 0 3rem;
+    }
+}
+
+.flowing-conversations-text,
+.flowing-conversations-img {
+    background-color: #fff;
+}
+
+.flowing-conversations-text {
+    @include responsive(lg) {
+        order: 2;
+    }
+}
+
+.flowing-conversations-img {
+    @include responsive(lg) {
+        order: 1;
+    }
+}
+
+.section-bg2 {
+    @include sectionBg(13.5rem, url(../images/bg-section-top-mobile-2.svg), 12rem, url(../images/bg-section-bottom-mobile-2.svg));
+
+    @include responsive(md) {
+        &::before {
+            background-image: url(../images/bg-section-top-desktop-2.svg);
+        }
+
+        &::after {
+            background-image: url(../images/bg-section-bottom-desktop-2.svg);
+        }
+    }
+}
+
+.build-your-community {
+    text-align: center;
+    padding-bottom: 10rem;
+
+    h2 {
+        font-size: 2.4rem;
+
+        @include responsive(l) {
+            font-size: 2.8rem
+        }
+    }
+}
+
+footer {
+    @include footerBg(url(../images/bg-footer-top-mobile.svg));
+    color: #fff;
+}
+
+.footer-content {
+    background-color: $veryDarkCyan;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @include responsive(lg) {
+        flex-direction: row;
+        column-gap: 20rem;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+.huddle,
+.newsletter {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.newsletter {
+    font-size: 1.4rem;
+    max-width: 70rem;
+
+    p {
+        line-height: 1.6;
+        max-width: 36rem;
+    }
+
+    @include responsive(lg) {
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+.newsletter-title {
+    display: inline-block;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 2.4rem;
+}
+
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.4rem;
+    row-gap: 1.2rem;
+    width: 33rem;
+    align-items: flex-end;
+
+    input {
+        display: inline-block;
+        width: 100%;
+        max-width: 33rem;
+        height: 4.6rem;
+        border-radius: .6rem;
+        padding-left: 1rem;
+        border: none;
+        outline: none;
+    }
+
+    @include responsive(lg) {
+        width: auto;
+        flex-direction: row;
+        column-gap: 2.4rem;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+}
+
+.subscribe-btn {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 16rem;
+    height: 4.6rem;
+    background-color: $pink;
+    border-radius: .6rem;
+    border: none;
+    outline: none;
+}
+
+.huddle {
+    max-width: 40rem;
+}
+
+.huddle-content {
+    @include responsive(lg) {
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.huddle-logo-ft {
+    padding-top: 6rem;
+
+    img {
+        width: 3.5rem;
+        transform: translateY(0.5rem);
+    }
+
+    @include responsive(lg) {
+        padding-top: 0;
+    }
+}
+
+.huddle-span {
+    font-family: 'Cocogoose';
+    font-size: 3.2rem;
+    padding-left: .4rem;
+}
+
+.huddle-text {
+    font-size: 1.4rem;
+    padding-top: 2.4rem;
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+
+.contact {
+    font-size: 1.4rem;
+    padding: 5rem 0;
+
+    p {
+        padding-bottom: 1.8rem;
+    }
+
+    i {
+        font-size: 2rem;
+        display: inline-block;
+        padding-right: 1.2rem;
+        transform: translateY(20%);
+    }
+}
+
+.social-medias {
+    display: flex;
+    column-gap: 1.8rem;
+    font-size: 2.4rem;
+}
+
+.twitter {
+    @include iconHover(#00acee);
+}
+
+.facebook {
+    @include iconHover(#3b5998)
+}
+
+.instagram {
+    @include iconHover(#c1558b);
+}

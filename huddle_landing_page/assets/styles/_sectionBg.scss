@@ -1,0 +1,68 @@
+@mixin sectionBg($topHeight,$topBgImg,$btmHeight,$btmBgImg) {
+    padding: 9rem 0;
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: '';
+        display: block;
+        position: static;
+        width: 100%;
+        height: $topHeight;
+        background-image: $topBgImg;
+        background-size: cover;
+        background-position: bottom right;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: static;
+        width: 100%;
+        height: $btmHeight;
+        background-image: $btmBgImg;
+        background-position:center;
+        background-size: cover;
+    }
+
+    @include responsive(lg) {
+        &::before {
+            height: 22rem;
+        }
+
+        &::after {
+            height: 22rem;
+        }
+    }
+}
+
+@mixin footerBg($bgImg){
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: '';
+        display: block;
+        position: static;
+        width: 100%;
+        height: 9rem;
+        background-image: $bgImg;
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(0.2rem);
+    }
+
+    @include responsive(md) {
+        &::before {
+            background-image: url(../images/bg-footer-top-desktop.svg);
+        }
+    }
+
+    @include responsive(lg){
+        &::before{
+            height: 22rem;
+        }
+    }
+}
+
