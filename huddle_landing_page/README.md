@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/huddle_landing_page](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/huddle_landing_page)
+- Live Site URL: [https://gbmoura-huddle-page.netlify.app/](https://gbmoura-huddle-page.netlify.app/)
 
 ### Built with
 
