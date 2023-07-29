@@ -266,6 +266,10 @@ figure img {
     text-align: center;
     width: 100%;
   }
+  .bg-section .content p {
+    line-clamp: 3;
+    padding: inherit;
+  }
 }
 
 .bg-section .content p {

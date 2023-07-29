@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Splitter</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo.svg" alt="Logo">
+    </header>
+    <main>
+        <section class="inputs-section">
+            <div class="bill">
+                <label for="bill-inp" class="text">Bill
+                    <img src="./images/icon-dollar.svg" alt="Icon" class="icon">
+                    <input type="number" id="bill-inp" class="icon-container styled-input" placeholder="0">
+                </label>
+            </div>
+            <div class="tip">
+                <span class="text">Select Tip %</span>
+                <div class="options">
+                    <div>
+                        <input type="radio" name="tip-percentage" id="tip5" value="5" checked>
+                        <label class="styled-hover label-tip" for="tip5">5%</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tip-percentage" id="tip10" value="10">
+                        <label class="styled-hover label-tip" for="tip10">10% </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tip-percentage" id="tip15" value="15">
+                        <label class="styled-hover label-tip" for="tip15">15%</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tip-percentage" id="tip25" value="25">
+                        <label class="styled-hover label-tip" for="tip25">25%</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tip-percentage" id="tip50" value="50">
+                        <label class="styled-hover label-tip" for="tip50">50%</label>
+                    </div>
+                    <div>
+                        <label for="custom-tip" class="styled-custom">
+                            <input type="number" id="custom-tip" placeholder="Custom" min="1">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="number-of-people">
+                <label for="people" class="text">Number of People
+                    <img src="./images/icon-person.svg" alt="Icon" class="icon person-icon">
+                    <input type="number" id="people" placeholder="1" value="1" class="styled-input">
+                </label>
+            </div>
+        </section>
+        <section class="outputs-section">
+            <div class="result-container">
+                <div class="results-description">
+                    <span>Tip Amount</span>
+                    <small>/ person</small>
+                </div>
+                <span class="result icon-container" id="tip-amount-value">$0.00</span>
+            </div>
+            <div class="result-container">
+                <div class="results-description">
+                    <span>Total</span>
+                    <small>/ person</small>
+                </div>
+                <span class="result icon-container" id="total-value">$0.00</span>
+            </div>
+            <div>
+                <button class="reset-btn styled-hover" onclick="getTipPercentage()">RESET</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <script src="./script/jquery.js"></script>
+        <script src="./script/index.js"></script>
+    </footer>
+</body>
+
+</html>

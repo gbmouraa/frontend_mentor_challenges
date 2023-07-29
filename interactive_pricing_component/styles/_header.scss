@@ -1,0 +1,44 @@
+@import '_colors';
+@import '_mixins';
+
+header {
+    min-height: 32rem;
+    background-image: url(../images/bg-pattern.svg);
+    background-size: cover;
+    background-position: left bottom;
+    padding-top: 7rem;
+    @include responsive(desktop){
+        min-height: 40rem;
+        padding-top: 10rem;
+    }
+}
+
+.header-text {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    h1 {
+        color: $darkDesaturatedBlue;
+        font-weight: 800;
+        padding-bottom: 1rem;
+    }
+
+    p{
+        padding: 0 8.2rem;
+    }
+
+    @include responsive(desktop){
+        h1{
+            font-size: 3.2rem;
+        }
+    }
+}
+
+img[alt="Illustration"] {
+    position: absolute;
+    top: -3rem;
+    transform: translateX(-50%);
+    z-index: -1;
+}

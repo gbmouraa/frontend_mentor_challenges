@@ -84,6 +84,11 @@ figure img {
             bottom: 0;
             text-align: center;
             width: 100%;
+
+            p{
+                line-clamp: 3;
+                padding: inherit;
+            }
         }
     }
 }

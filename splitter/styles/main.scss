@@ -1,0 +1,279 @@
+$strongCyan: hsl(172, 67%, 45%);
+$veryDarkCyan: hsl(183, 100%, 15%);
+$darkGrayishCyan: hsl(186, 14%, 43%);
+$grayishCyan: hsl(184, 14%, 56%);
+$lightGrayishCyan: hsl(185, 41%, 84%);
+$veryLightGrayishCyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+@mixin responsive($screen) {
+    @if $screen ==desktop {
+        @media screen and (min-width:1044px) {
+            @content;
+        }
+    }
+
+    @else if $screen ==medium {
+        @media screen and (max-width:1043px) {
+            @content;
+        }
+    }
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Space Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: $lightGrayishCyan;
+
+    @include responsive(desktop) {
+        padding-top: 10rem;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 3.2rem 0;
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        letter-spacing: .8rem;
+        color: $veryDarkCyan;
+    }
+}
+
+main {
+    background-color: $white;
+    border-radius: 1.6rem;
+    padding: 2.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 104.4rem;
+    margin: auto;
+
+    @include responsive(desktop) {
+        justify-content: space-between;
+    }
+
+    @include responsive(medium) {
+        max-width: 53rem;
+    }
+}
+
+// ---------------------------------------
+
+input {
+    font-family: 'Space Mono', monospace;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+input[type="radio"]:checked+label{
+    background-color: $strongCyan;
+    color: $veryDarkCyan;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+// -----------------------------------------
+
+.text {
+    font-size: 1.6rem;
+    color: $darkGrayishCyan;
+    line-height: 2.3;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.6rem;
+}
+
+.person-icon {
+    transform: translateY(.6rem);
+}
+
+// --------------------------------
+
+.inputs-section,
+.outputs-section {
+    width: 100%;
+    max-width: 48.6rem;
+}
+
+// --------------------------------
+
+.bill>* {
+    display: block;
+}
+
+.bill {
+    padding-bottom: 2.4rem;
+}
+
+.bill input,
+.number-of-people input {
+    width: 100%;
+    height: 4.6rem;
+    text-align: right;
+    padding-right: 1.6rem;
+    border: 0;
+    outline: 0;
+    border-radius: .6rem;
+    background-color: $veryLightGrayishCyan;
+    color: $veryDarkCyan;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.number-of-people {
+    padding-bottom: 2.4rem;
+}
+
+// -----------------------------
+
+.tip {
+    padding-bottom: 2.4rem;
+}
+
+// -----------------------------
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    padding-top: 1.2rem;
+}
+
+.options>* {
+    text-align: center;
+}
+
+.options label {
+    background-color: $veryDarkCyan;
+    width: 15rem;
+    height: 4.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    border-radius: .6rem;
+    color: $veryLightGrayishCyan;
+    overflow: hidden;
+}
+
+label[for="custom-tip"] {
+    background-color: $veryLightGrayishCyan;
+
+    input {
+        background-color: $veryLightGrayishCyan;
+        border: 0;
+        text-align: center;
+        font-size: 2.4rem;
+        color: $veryDarkCyan ;
+        outline: 0;
+        width: 100%;
+
+        &::placeholder {
+            color: $grayishCyan;
+        }
+    }
+}
+
+// ------------------------------------
+
+.outputs-section {
+    background-color: $veryDarkCyan;
+    border-radius: 1.2rem;
+    padding: 3.2rem 2.4rem;
+    position: relative;
+}
+
+.result-container {
+    padding-bottom: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.results-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.results-description span {
+    font-size: 1.6rem;
+    color: $white;
+}
+
+.results-description small {
+    color: $grayishCyan;
+    font-size: 1.2rem;
+}
+
+.result {
+    font-size: 4rem;
+    color: $strongCyan;
+}
+
+.reset-btn {
+    display: block;
+    width: calc(100% - 24px);
+    margin: auto;
+    border-radius: .8rem;
+    background-color: $strongCyan;
+    color: $veryDarkCyan;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding: 1.2rem 0;
+    border: 0;
+
+    @include responsive(desktop) {
+        position: absolute;
+        bottom: 3.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 70px);
+    }
+}
+
+// -------------------------------------------
+
+.styled-input {
+    &:focus,
+    &:hover {
+        border: 2px solid $strongCyan;
+    }
+}
+
+.styled-hover {
+    transition: all .2s ease;
+
+    &:hover {
+        background-color: hsl(172, 58%, 71%);
+        color: $veryDarkCyan;
+        cursor: pointer;
+    }
+}
+
+.styled-focus{
+    border: 2px solid $strongCyan;
+}

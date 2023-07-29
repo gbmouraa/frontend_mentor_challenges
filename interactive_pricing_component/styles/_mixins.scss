@@ -1,0 +1,13 @@
+@mixin responsive($screen) {
+    @if $screen ==mobile {
+        @media screen and (max-width: 759px) {
+            @content;
+        }
+    }
+
+    @else if $screen ==desktop {
+        @media screen and (min-width: 760px) {
+            @content;
+        }
+    }
+}

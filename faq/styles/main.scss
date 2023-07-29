@@ -1,0 +1,230 @@
+$veryDarkDesaturatedBlue: #1d1e35;
+$softRed: hsl(14, 88%, 65%);
+$softViolet: #af67e9;
+$softBlue: #6565e7;
+$veryDarkGrayishBlue: #4a4b5e;
+$darkGrayishBlue: #787887;
+$lightGrayishBlue: hsl(240, 5%, 91%);
+
+@mixin responsive($screen) {
+    @if $screen ==desktop {
+        @media screen and (min-width: 1020px) {
+            @content;
+        }
+    }
+}
+
+// --------------------------------------------------------
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2.4rem;
+    background: rgb(101, 101, 231);
+    background: linear-gradient(0deg, rgba(101, 101, 231, 1) 31%, rgba(175, 103, 233, 1) 93%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+p {
+    font-size: 1.3rem;
+    color: $darkGrayishBlue;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 2.4rem;
+    width: 100%;
+    max-width: 90rem;
+
+    @include responsive(desktop) {
+        display: flex;
+        min-height: 42rem;
+        position: relative;
+    }
+}
+
+// ---------------------------------
+figure {
+    width: 32.7rem;
+    position: relative;
+    margin: auto;
+    height: 20rem;
+    transform: translateY(-11.1rem);
+
+    @include responsive(desktop) {
+        transform: translateY(0);
+        margin: 0;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+
+figure>* {
+    width: 75%;
+    display: block;
+
+    @include responsive(desktop) {
+        width: 100%;
+    }
+}
+
+// --------------------------------- mobile images
+img[img-mobile] {
+    @include responsive(desktop) {
+        display: none;
+    }
+}
+
+.woman-online-mobile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg-pattern-mobile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.2rem;
+}
+
+// ------------------------------------- desktop images
+img[img-desktop] {
+    display: none;
+
+    @include responsive(desktop) {
+        display: block;
+    }
+}
+
+.bg-pattern-desktop {
+    position: absolute;
+    left: -50%;
+    bottom: -5rem;
+}
+
+.woman-online-desktop {
+    position: absolute;
+    width: 45rem;
+    top: 4rem;
+    left: -8rem;
+}
+
+.box-desktop {
+    z-index: 10;
+    position: absolute;
+    width: 18rem;
+    left: -8.7rem;
+    top: 17rem;
+}
+
+.bg-pattern-desktop {
+    position: absolute;
+    top: -23rem;
+    left: -43rem;
+    width: 80rem;
+}
+
+// ----------------------------------
+.content {
+    transform: translateY(-7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2.4rem;
+
+    @include responsive(desktop) {
+        transform: translateY(0);
+        padding: 5.6rem 7.2rem 4rem 0;
+        align-items: flex-start;
+    }
+}
+
+h1 {
+    font-size: 3.2rem;
+    color: $veryDarkDesaturatedBlue;
+    margin-bottom: 2.4rem;
+}
+
+.questions-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq {
+    width: 100%;
+    background-color: #fff;
+    border: 0;
+    border-bottom: .1rem solid $lightGrayishBlue;
+    padding: 1.6rem 0;
+    text-align: left;
+}
+
+.question {
+    position: relative;
+    &:hover{
+        h3{
+            color: $softRed;
+            cursor: pointer;
+        }
+    }
+}
+
+.question h3{
+    font-weight: 400;
+    transition: all .4s ease;
+}
+
+img[alt="Icon arrow"]{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(50%);
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.answer {
+    display: none;
+}
+
+.answer {
+    padding-top: 1.6rem;
+}
+
+figure,
+.content {
+    @include responsive(desktop) {
+        width: 50%;
+    }
+}
+
+// ------------------------------- active status
+.active > .answer{
+    display: block;
+}
+
+.active h3 {
+    color: $veryDarkDesaturatedBlue;
+    font-weight: 700;
+}
+
+.active img{
+    transform: rotate(180deg);
+    transform: all .3s ease-in;
+}

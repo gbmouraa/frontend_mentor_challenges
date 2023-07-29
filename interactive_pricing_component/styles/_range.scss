@@ -1,0 +1,46 @@
+@import '_colors';
+
+#input-container {
+    height: 8rem;
+    width: 100%;
+}
+
+#input-container .field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#range {
+    appearance: none;
+    height: .8rem;
+    border-radius: .8rem;
+    background-color: $lightGrayishBlue;
+    outline: none;
+    border: none;
+}
+
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $strongCyan;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: $strongCyan 0px 10px 40px 0px;
+}
+
+input[type="range"] {
+    appearance: none;
+    -moz-apperance: none;
+    background-image: -webkit-gradient(linear,
+            left top,
+            right top,
+            color-stop(0.20, hsl(174, 86%, 45%)),
+            color-stop(0.20, hsl(223, 50%, 87%)));
+}

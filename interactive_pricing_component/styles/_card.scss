@@ -1,0 +1,212 @@
+@import '_colors';
+@import '_mixins';
+
+.pricing-card {
+    width: 100%;
+    max-width: 70rem;
+    padding: 3.2rem 1.6rem;
+    background-color: #ffff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @include responsive(desktop){
+        padding: 4.2rem 6.2rem;
+    }
+}
+
+.plan-config{
+    @include responsive(desktop){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        'pageviews monthPrice'
+        'range     range'
+        'billing   billing'
+        'divider   divider';
+
+        #views-container{
+            grid-area: pageviews;
+        }
+        #input-container{
+            grid-area: range;
+        }
+        #billing-container{
+            grid-area: billing;
+        }
+        #divider{
+            grid-area: divider;
+        }
+    }
+}
+
+.pricing-card>div {
+    text-align: center;
+    width: 100%;
+}
+
+#views-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include responsive(desktop){
+        justify-content: left;
+    }
+}
+
+.views {
+    font-weight: 800;
+    letter-spacing: .2rem;
+    @include responsive(desktop){
+        font-size: 1.8rem;
+    }
+}
+
+input {
+    width: 100%;
+}
+
+.plan-config>div:not(#billing-container) {
+    padding-bottom: 2.8rem;
+}
+
+#month-price {
+    color: $darkDesaturatedBlue;
+    font-size: 3.2rem;
+    font-weight: 800;
+    @include responsive(desktop){
+        font-size: 4.2rem;
+    }
+}
+
+#billing-type-btn {
+    display: none;
+}
+
+label[for="billing-type-btn"]{
+    width: 5.2rem;
+    height: 2.6rem;
+    background-color: $lightGrayishBlue;
+    border: 0;
+    border-radius: 1.6rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: #fff;
+        border-radius: 50%;
+        top: .4rem;
+        left: .4rem;
+        transition: all .2s;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#billing-type-btn:checked + label::before{
+    transform: translateX( 2.6rem);
+}
+
+#billing-type-btn:checked + label{
+    background-color:$strongCyan;
+}
+
+#billing-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    justify-content: center;
+    column-gap: 1rem;
+    color: $grayishBlue;
+    padding-bottom: 4.2rem;
+}
+
+.styled-span-billing {
+    color: $lightRed;
+    background-color: $lightGrayishRed;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: .3rem .8rem;
+    border-radius: 1.2rem;
+    display: inline-block;
+    transform: translateX(.4rem);
+}
+
+.sm-span-billing{
+    @include responsive(desktop){
+        display: none;
+    }
+}
+
+.full-span-billing{
+    @include responsive(mobile){
+        display: none;
+    }
+}
+
+#divider {
+    display: block;
+    width: calc(100% + 3.2rem);
+    height: .1rem;
+    background-color: $lightGrayishBlue;
+    transform: translateX(-1.6rem);
+    @include responsive(desktop){
+        width: calc(100% + 12.4rem);
+        transform: translateX(-6.2rem);        
+    }
+}
+
+.service-benefits-description {
+    padding-top: 3.5rem;
+    @include responsive(desktop){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.benefits-ul {
+    list-style-type: none;
+    padding-bottom: 3rem;
+    @include responsive(desktop){
+        text-align: left;
+    }
+}
+
+.benefits-ul li {
+    padding: .8rem;
+    font-size: 1.4rem;
+    color: $grayishBlue;
+    img{
+        margin-right: 1rem;
+    }
+}
+
+#start-trial-btn{
+    padding: 1.2rem 0;
+    color: $paleBlue;
+    width: 18rem;
+    font-weight: 800;
+    background-color: $darkDesaturatedBlue;
+    border: 0;
+    border-radius: 2.2rem;
+    transition: all .2s;
+
+    &:hover{
+        color: #fff;
+        cursor: pointer;
+    }
+
+    @include responsive(desktop){
+        font-size: 1.6rem;
+        width: 20rem;
+    }
+}

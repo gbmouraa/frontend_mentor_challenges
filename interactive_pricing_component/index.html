@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <title>Interactive pricing component</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-text">
+            <img src="images/pattern-circles.svg" alt="Illustration">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sing-up for our 30 day trial. No credit card required.</p>
+        </div>
+    </header>
+    <main>
+        <div class="pricing-card">
+            <div class="plan-config">
+                <div id="views-container">
+                    <p class="views"><span id="qtd-of-views">10K</span> PAGEVIEWS</p>
+                </div>
+                <div id="input-container">
+                    <div class="field">
+                        <input type="range" min="1" value="2" max="6"  id="range">
+                    </div>
+                </div>
+                <div id="month-price-container">
+                    <p><span id="month-price">$8.00</span> /month</p>
+                </div>
+                <div id="billing-container">
+                    <span>Monthly Billing </span>
+                    <input type="checkbox" id="billing-type-btn"></input>
+                    <label for="billing-type-btn"></label>
+                     <span>Yearly Billing <span
+                            class="styled-span-billing sm-span-billing">-25%</span> <span class="full-span-billing styled-span-billing">25% discount</span></span>
+                </div>
+                <span id="divider"></span>
+            </div>
+            <div class="service-benefits-description">
+                <ul class="benefits-ul">
+                    <li><img src="images/icon-check.svg" alt="Icon check"> Unlimited websites</li>
+                    <li><img src="images/icon-check.svg" alt="Icon check"> 100% data ownership</li>
+                    <li><img src="images/icon-check.svg" alt="Icon check"> Email reports</li>
+                </ul>
+                <button id="start-trial-btn">Start my trial</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <script src="script/jQuery.js"></script>
+        <script src="script/index.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+header {
+  min-height: 32rem;
+  background-image: url(../images/bg-pattern.svg);
+  background-size: cover;
+  background-position: left bottom;
+  padding-top: 7rem;
+}
+@media screen and (min-width: 760px) {
+  header {
+    min-height: 40rem;
+    padding-top: 10rem;
+  }
+}
+
+.header-text {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.header-text h1 {
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+.header-text p {
+  padding: 0 8.2rem;
+}
+@media screen and (min-width: 760px) {
+  .header-text h1 {
+    font-size: 3.2rem;
+  }
+}
+
+img[alt=Illustration] {
+  position: absolute;
+  top: -3rem;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.pricing-card {
+  width: 100%;
+  max-width: 70rem;
+  padding: 3.2rem 1.6rem;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media screen and (min-width: 760px) {
+  .pricing-card {
+    padding: 4.2rem 6.2rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .plan-config {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "pageviews monthPrice" "range     range" "billing   billing" "divider   divider";
+  }
+  .plan-config #views-container {
+    grid-area: pageviews;
+  }
+  .plan-config #input-container {
+    grid-area: range;
+  }
+  .plan-config #billing-container {
+    grid-area: billing;
+  }
+  .plan-config #divider {
+    grid-area: divider;
+  }
+}
+
+.pricing-card > div {
+  text-align: center;
+  width: 100%;
+}
+
+#views-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 760px) {
+  #views-container {
+    justify-content: left;
+  }
+}
+
+.views {
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+}
+@media screen and (min-width: 760px) {
+  .views {
+    font-size: 1.8rem;
+  }
+}
+
+input {
+  width: 100%;
+}
+
+.plan-config > div:not(#billing-container) {
+  padding-bottom: 2.8rem;
+}
+
+#month-price {
+  color: hsl(227, 35%, 25%);
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+@media screen and (min-width: 760px) {
+  #month-price {
+    font-size: 4.2rem;
+  }
+}
+
+#billing-type-btn {
+  display: none;
+}
+
+label[for=billing-type-btn] {
+  width: 5.2rem;
+  height: 2.6rem;
+  background-color: hsl(223, 50%, 87%);
+  border: 0;
+  border-radius: 1.6rem;
+  position: relative;
+}
+label[for=billing-type-btn]::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 0.4rem;
+  left: 0.4rem;
+  transition: all 0.2s;
+}
+label[for=billing-type-btn]:hover {
+  cursor: pointer;
+}
+
+#billing-type-btn:checked + label::before {
+  transform: translateX(2.6rem);
+}
+
+#billing-type-btn:checked + label {
+  background-color: hsl(174, 86%, 45%);
+}
+
+#billing-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  justify-content: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  color: hsl(225, 20%, 60%);
+  padding-bottom: 4.2rem;
+}
+
+.styled-span-billing {
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1.2rem;
+  display: inline-block;
+  transform: translateX(0.4rem);
+}
+
+@media screen and (min-width: 760px) {
+  .sm-span-billing {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .full-span-billing {
+    display: none;
+  }
+}
+
+#divider {
+  display: block;
+  width: calc(100% + 3.2rem);
+  height: 0.1rem;
+  background-color: hsl(223, 50%, 87%);
+  transform: translateX(-1.6rem);
+}
+@media screen and (min-width: 760px) {
+  #divider {
+    width: calc(100% + 12.4rem);
+    transform: translateX(-6.2rem);
+  }
+}
+
+.service-benefits-description {
+  padding-top: 3.5rem;
+}
+@media screen and (min-width: 760px) {
+  .service-benefits-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.benefits-ul {
+  list-style-type: none;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 760px) {
+  .benefits-ul {
+    text-align: left;
+  }
+}
+
+.benefits-ul li {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(225, 20%, 60%);
+}
+.benefits-ul li img {
+  margin-right: 1rem;
+}
+
+#start-trial-btn {
+  padding: 1.2rem 0;
+  color: hsl(226, 100%, 87%);
+  width: 18rem;
+  font-weight: 800;
+  background-color: hsl(227, 35%, 25%);
+  border: 0;
+  border-radius: 2.2rem;
+  transition: all 0.2s;
+}
+#start-trial-btn:hover {
+  color: #fff;
+  cursor: pointer;
+}
+@media screen and (min-width: 760px) {
+  #start-trial-btn {
+    font-size: 1.6rem;
+    width: 20rem;
+  }
+}
+
+#input-container {
+  height: 8rem;
+  width: 100%;
+}
+
+#input-container .field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#range {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+  background-color: hsl(223, 50%, 87%);
+  outline: none;
+  border: none;
+}
+
+#range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4rem;
+  height: 4rem;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: hsl(174, 86%, 45%) 0px 10px 40px 0px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -moz-apperance: none;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.2, hsl(174, 86%, 45%)), color-stop(0.2, hsl(223, 50%, 87%)));
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(230, 100%, 99%);
+}
+
+p {
+  color: hsl(225, 20%, 60%);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-10rem);
+  padding: 0 2.4rem;
+}
+@media screen and (min-width: 760px) {
+  main {
+    transform: translateY(-16rem);
+  }
+}/*# sourceMappingURL=main.css.map */
