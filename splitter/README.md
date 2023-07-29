@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/gbmouraa/splitter](https://github.com/gbmouraa/splitter)
-- Live Site URL: [https://gbmouraa.github.io/splitter/](https://gbmouraa.github.io/splitter/)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/splitter](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/splitter)
+- Live Site URL: [https://gbmoura-splitter.netlify.app/](https://gbmoura-splitter.netlify.app/)
 
 ## My process
 

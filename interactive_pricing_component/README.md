@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://gbmouraa.github.io/interactive_pricing_component/](https://gbmouraa.github.io/interactive_pricing_component/)
-- Solution URL: [https://github.com/gbmouraa/interactive_pricing_component](https://github.com/gbmouraa/interactive_pricing_component)
+- Live Site URL: [https://gbmoura-interactivepricingcomp.netlify.app/](https://gbmoura-interactivepricingcomp.netlify.app/)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/interactive_pricing_component](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/interactive_pricing_component)
 
 ## Author
 

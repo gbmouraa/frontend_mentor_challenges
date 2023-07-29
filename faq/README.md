@@ -8,8 +8,8 @@
 
 ### Links
 
-- Solution URL: [https://github.com/gbmouraa/FAQ](https://github.com/gbmouraa/FAQ)
-- Live Site URL: [https://gbmouraa.github.io/FAQ/](https://gbmouraa.github.io/FAQ/)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/faq](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/faq)
+- Live Site URL: [https://gbmoura-faq.netlify.app/](https://gbmoura-faq.netlify.app/)
 
 ## Author
 
