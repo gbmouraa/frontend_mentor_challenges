@@ -8,8 +8,8 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/order_summary_component](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/order_summary_component)
+- Live Site URL: [https://gbmoura-order-summary.netlify.app/](https://gbmoura-order-summary.netlify.app/)
 
 ### Built with
 
@@ -18,5 +18,5 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 ## Author
 
 - Frontend Mentor - [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
-- Linkedin - [Gabriel MOura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
+- Linkedin - [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
 
