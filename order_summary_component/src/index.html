@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/build.css">
+  <title>Order summary</title>
+</head>
+
+<body class=" bg-p-blue flex justify-center items-center w-full h-screen p-6 font-redHat relative">
+  <div class="bg-pattern-mobile w-full h-1/2 bg-left-bottom absolute top-0 left-0 bg-no-repeat bg-cover md:bg-pattern-desktop"></div>
+  <div class="bg-white rounded-2xl overflow-hidden max-w-sm z-10">
+    <figure>
+      <img src="./images/illustration-hero.svg" alt="Illustration">
+    </figure>
+    <div class="flex flex-col w-full p-6 text-center gap-y-5">
+      <div>
+        <h1 class="text-2xl font-black  text-drk-blue">Order Summary</h1>
+        <p class="pt-4 px-5 text-d-blue font-medium">You can now listen to millions of songs, audiobooks,and podcasts
+          on any device anywhere you like!
+        </p>
+      </div>
+      <div class="flex items-center gap-x-4 p-6 bg-vp-blue rounded-lg">
+        <img src="./images/icon-music.svg" alt="Icon music">
+        <p class="flex flex-col flex-grow text-start font-black text-drk-blue">Annual Plan
+          <small class="font-medium text-d-blue text-base">$59.99/year</small>
+        </p>
+        <span
+          class="text-right text-b-blue font-bold transition-all cursor-pointer underline hover:opacity-60 hover:no-underline">Change</span>
+      </div>
+      <div class="flex gap-y-6 flex-col">
+        <button
+          class="w-full bg-b-blue py-4 rounded-xl font-bold text-white hover:opacity-60 transition-all shadow-xl shadow-p-blue">Proceed
+          to Payment</button>
+        <span class="font-bold text-d-blue hover:text-drk-blue cursor-pointer transition-all">Cancel Order</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
