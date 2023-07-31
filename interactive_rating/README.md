@@ -29,4 +29,4 @@ Users should be able to:
 ## Author
 
 - Linkedin - [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
