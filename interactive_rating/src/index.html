@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/build.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <link rel="icon" href="assets/images/favicon-32x32.png">
+  <title>Interactive rating</title>
+</head>
+
+<body class="bg-neutral-900 font-overpass text-gray-400 flex justify-center items-center w-full h-screen px-4 overflow-hidden">
+  <section id="rating-container" class="z-10">
+    <div class="bg-neutral-950 rounded-3xl p-6 w-full max-w-sm">
+      <div class="pb-6">
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex justify-center items-center">
+          <img src="./assets/images/icon-star.svg" alt="Icon star" class="block">
+        </div>
+        <h1 class="pt-5 pb-3 text-white font-bold text-2xl">How did we do?</h1>
+        <p class="text-sm">Please let us know how we did with your support request.All feedback is
+          appreciated to help us improve our offering!
+        </p>
+      </div>
+      <form id="form">
+        <ul class="flex justify-between pb-6">
+          <li>
+            <input id="rating-1" type="radio" name="rating" value="1" class="peer hidden">
+            <label for="rating-1" class="peer-checked:bg-orange-500 peer-checked:text-white peer-checked:font-bold hover:bg-slate-300  hover:text-white hover:font-bold transition-all w-12 h-12
+               rounded-full bg-gray-800 flex items-center justify-center cursor-pointer">1</label>
+          </li>
+          <li>
+            <input id="rating-2" type="radio" name="rating" value="2" class="peer hidden">
+            <label for="rating-2" class="peer-checked:bg-orange-500 peer-checked:text-white peer-checked:font-bold hover:bg-slate-300  hover:text-white hover:font-bold transition-all w-12 h-12
+               rounded-full bg-gray-800 flex items-center justify-center cursor-pointer">2</label>
+          </li>
+          <li>
+            <input id="rating-3" type="radio" name="rating" value="3" class="peer hidden">
+            <label for="rating-3" class="peer-checked:bg-orange-500 peer-checked:text-white peer-checked:font-bold hover:bg-slate-300  hover:text-white hover:font-bold transition-all w-12 h-12
+               rounded-full bg-gray-800 flex items-center justify-center cursor-pointer">3</label>
+          </li>
+          <li>
+            <input id="rating-4"type="radio" name="rating" value="4" class="peer hidden">
+            <label for="rating-4" class="peer-checked:bg-orange-500 peer-checked:text-white peer-checked:font-bold hover:bg-slate-300  hover:text-white hover:font-bold transition-all w-12 h-12
+               rounded-full bg-gray-800 flex items-center justify-center cursor-pointer">4</label>
+          </li>
+          <li>
+            <input id="rating-5" type="radio" name="rating" value="5" class="peer hidden">
+            <label for="rating-5" class="peer-checked:bg-orange-500 peer-checked:text-white peer-checked:font-bold hover:bg-slate-300  hover:text-white hover:font-bold transition-all w-12 h-12
+               rounded-full bg-gray-800 flex items-center justify-center cursor-pointer">5</label>
+          </li>
+        </ul>
+        <button class="w-full py-3 bg-orange-600 text-center text-white leading-none rounded-3xl transition-all hover:bg-white hover:text-orange-500">SUBMIT</button>
+      </form>
+    </div>
+  </section>
+  <section id="thank-u-container" class="font-overpass text-gray-400 opacity-0 fixed -translate-x-1/2 top-2/4 -translate-y-1/2 left-2/4 justify-center items-center px-4 w-full max-w-sm">
+    <div class="bg-neutral-950 rounded-3xl px-6 py-8 w-full max-w-sm flex flex-col justify-center items-center gap-y-5 text-center">
+      <img src="./assets/images/illustration-thank-you.svg" alt="Illustration">
+      <p class="text-orange-500 bg-gray-800 leading-none px-5 py-2 rounded-3xl text-sm">You selected <span id="rating-send"></span> out of 5</p>
+      <h1 class="text-white font-bold text-2xl">Thank you!</h1>
+      <p class="text-sm px-2">We appreciate you taking the time to give a rating. If you ever need more suppport, don't hesitate
+        to get in touch!
+      </p>
+    </div>
+  </section>
+</body>
+
+</html>

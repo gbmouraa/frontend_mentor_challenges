@@ -1,0 +1,4 @@
+*.sketch
+*.fig
+*.xd
+/node_modules/
