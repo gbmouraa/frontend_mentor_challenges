@@ -30,6 +30,7 @@ main {
   border-radius: 2.4rem;
   width: 100%;
   max-width: 90rem;
+  animation: container-animation 1s;
 }
 @media screen and (min-width: 1020px) {
   main {
@@ -39,6 +40,28 @@ main {
   }
 }
 
+@keyframes box-animation {
+  0% {
+    transform: translateY(-15rem);
+  }
+  80% {
+    transform: translateY(0rem);
+  }
+  90% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes container-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 figure {
   width: 32.7rem;
   position: relative;
@@ -112,6 +135,7 @@ img[img-desktop] {
   width: 18rem;
   left: -8.7rem;
   top: 17rem;
+  animation: box-animation 2s;
 }
 
 .bg-pattern-desktop {
@@ -181,11 +205,14 @@ img[alt="Icon arrow"]:hover {
 }
 
 .answer {
-  display: none;
+  display: block;
+  height: 0rem;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
-.answer {
-  padding-top: 1.6rem;
+.icon-arrow {
+  transition: all 0.5s;
 }
 
 @media screen and (min-width: 1020px) {
@@ -196,7 +223,10 @@ img[alt="Icon arrow"]:hover {
 }
 
 .active > .answer {
-  display: block;
+  padding-top: 1.6rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  opacity: 1;
 }
 
 .active h3 {
@@ -204,7 +234,7 @@ img[alt="Icon arrow"]:hover {
   font-weight: 700;
 }
 
-.active img {
+.active .icon-arrow {
   transform: rotate(180deg);
   transform: all 0.3s ease-in;
 }/*# sourceMappingURL=main.css.map */
