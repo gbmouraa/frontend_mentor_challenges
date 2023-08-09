@@ -21,12 +21,12 @@
 
 <body class="w-full h-screen bg-main-bg">
   <div class="bg-dark-blue">
-    <header class="px-5 md:px-[15%] py-8 flex container mx-auto ">
+    <header class="px-5 lg:px-[15%] py-8 flex container mx-auto ">
       <div>
         <img src="./assets/images/logo.svg" alt="Logo" class="w-20 md:w-28">
       </div>
       <nav class="flex-1">
-        <ul class="flex justify-end gap-x-3 text-white font-raleway text-sm md:text-base">
+        <ul class="flex justify-end gap-x-3 md:gap-6 text-white font-raleway text-sm md:text-base">
           <li><a href="#" class="opacity-70 hover:opacity-100 hover:underline transition-all duration-300">Features</a>
           </li>
           <li><a href="#" class="opacity-70 hover:opacity-100 hover:underline transition-all duration-300">Team</a></li>
@@ -38,67 +38,71 @@
   </div>
   <main>
     <div
-      class="bg-dark-blue flex justify-center bg-curvy-mb bg-no-repeat bg-custom-sm bg-bottom md:bg-curvy md:bg-custom-lg pb-40">
+      class="bg-dark-blue flex justify-center bg-curvy-mb bg-no-repeat bg-custom-sm bg-bottom md:bg-curvy md:bg-custom-lg">
       <div class="container flex flex-col items-center">
-        <div class="px-6 pt-6 w-full max-w-lg">
+        <div class="px-6 pt-6 w-full max-w-lg md:max-w-2xl">
           <img src="./assets/images/illustration-intro.png" alt="Illustration" class="w-full max-w-lg block mx-auto">
         </div>
-        <div class="text-center pt-6 w-full max-w-lg">
-          <h1 class="text-white font-bold text-2xl leading-8 px-6 font-raleway"> All your files in one secure location,
+        <div class="text-center pt-6 w-full max-w-lg md:max-w-2xl">
+          <h1 class="text-white font-bold text-2xl md:text-4xl leading-8 md:leading-normal px-6 font-raleway"> All your
+            files in one secure location,
             accessible
             anywhere.</h1>
-          <p class="px-6 py-5 text-white opacity-90 text-sm font-open-sans"> Fylo stores all your most important files
+          <p class="py-5 px-6 md:px-[86px] text-white opacity-90 text-sm md:text-base font-open-sans"> Fylo stores all
+            your most important files
             in one secure
             location. Access them wherever
             you need, share and collaborate with friends family, and co-workers.</p>
-          <a href="#" class="inline-block text-white bg-cyan mx-auto py-3 px-20 rounded-full mb-5 bg-btn-gradient
-          font-bold text-sm hover:bg-btn-gradient-hv">Get Started</a>
+          <a href="#" class="block text-white bg-cyan mx-auto py-3 w-60 rounded-full bg-btn-gradient
+          font-bold text-sm md:text-base hover:bg-btn-gradient-hv">Get Started</a>
         </div>
       </div>
     </div>
     <div class="bg-main-bg font-open-sans -translate-y-[1px]">
       <div
-        class="container mx-auto px-6 pb-40 grid grid-cols-1 md:grid md:grid-cols-2 md:grid-rows-2 place-items-center gap-y-9 lg:w-4/5">
-        <div class="flex flex-col items-center text-center max-w-xs">
+        class="container mx-auto px-6 py-40 grid grid-cols-1 md:grid md:grid-cols-2 md:grid-rows-2 place-items-center  gap-y-9 gap-x-6 lg:gap-x-0 lg:w-4/5">
+        <div class="flex flex-col items-center text-center max-w-xs md:max-w-sm">
           <div class="py-5">
             <img src="./assets/images/icon-access-anywhere.svg" alt="icon">
           </div>
           <div>
-            <p class="text-white text-lg font-bold font-raleway pb-3"> Access your files, anywhere</p>
-            <p class="opacity-90 text-white text-sm">
+            <p class="text-white text-lg md:text-xl font-bold font-raleway pb-3"> Access your files, anywhere</p>
+            <p class="opacity-90 text-white text-sm md:text-base">
               The ability to use a smartphone, tablet, or computer to access your account means your
               files follow you everywhere.</p>
           </div>
         </div>
-        <div class="flex flex-col items-center text-center max-w-xs">
+        <div class="flex flex-col items-center text-center max-w-xs md:max-w-sm">
           <div class="py-5">
             <img src="./assets/images/icon-security.svg" alt="icon">
           </div>
           <div>
-            <p class="text-white text-lg font-bold font-raleway pb-3">Security you can trust</p>
-            <p class="opacity-90 text-white text-sm">
+            <p class="text-white text-lg md:text-xl font-bold font-raleway pb-3">Security you can trust</p>
+            <p class="opacity-90 text-white text-sm md:text-base">
               2-factor authentication and user-controlled encryption are just a couple of the security
               features we allow to help secure your files.</p>
           </div>
         </div>
-        <div class="flex flex-col items-center text-center max-w-xs">
+        <div class="flex flex-col items-center text-center max-w-xs md:max-w-sm">
           <div class="py-5">
             <img src="./assets/images/icon-collaboration.svg" alt="">
           </div>
           <div>
-            <p class="text-white text-lg font-bold font-raleway pb-3"> Real-time collaboration</p>
-            <p class="opacity-90 text-white text-sm">Securely share files and folders with friends, family and
+            <p class="text-white text-lg md:text-xl font-bold font-raleway pb-3"> Real-time collaboration</p>
+            <p class="opacity-90 text-white text-sm md:text-base">Securely share files and folders with friends, family
+              and
               colleagues for live collaboration.
               No email attachments required.</p>
           </div>
         </div>
-        <div class="flex flex-col items-center text-center max-w-xs">
+        <div class="flex flex-col items-center text-center max-w-xs md:max-w-sm">
           <div class="py-5">
             <img src="./assets/images/icon-any-file.svg" alt="icon">
           </div>
           <div>
-            <p class="text-white text-lg font-bold font-raleway pb-3">Store any type of file</p>
-            <p class="opacity-90 text-white text-sm">Whether you're sharing holidays photos or work documents, Fylo has
+            <p class="text-white text-lg md:text-xl font-bold font-raleway pb-3">Store any type of file</p>
+            <p class="opacity-90 text-white text-sm md:text-base">Whether you're sharing holidays photos or work
+              documents, Fylo has
               you covered allowing for all
               file types to be securely stored and shared.</p>
           </div>
@@ -109,22 +113,28 @@
           <img src="./assets/images/illustration-stay-productive.png" alt="Illustration" class="w-full max-w-lg">
         </div>
         <div>
-          <p class="text-white text-lg font-bold font-raleway pb-3">Stay productive, wherever you are</p>
-          <p class="pb-3 opacity-90 text-white text-sm">Never let location be an issue when accessing your files. Fylo
+          <p class="text-white text-lg md:text-4xl font-bold font-raleway pb-3 max-w-md">Stay productive, wherever you
+            are</p>
+          <p class="pb-3 opacity-90 text-white text-sm md:text-base">Never let location be an issue when accessing your
+            files. Fylo
             has you covered for all of your file
             storage needs.</p>
-          <p class="pb-3 opacity-90 text-white text-sm">Securely share files and folders with friends, family and
+          <p class="pb-3 opacity-90 text-white text-sm md:text-base">Securely share files and folders with friends,
+            family and
             colleagues for live collaboration. No email
             attachments required.</p>
-          <a href="#" class="text-cyan text-sm flex border-b-2 w-fit pb-1 hover:text-white transition-all parent">See how Fylo works
+          <a href="#"
+            class="text-cyan text-sm md:text-base flex border-b-2 w-fit pb-1 hover:text-white transition-all parent">See
+            how Fylo works
             <i class="fa-solid fa-arrow-right pt-1 pl-1"></i></a>
         </div>
       </div>
       <div class="container relative mx-auto pb-11 px-6 flex flex-wrap gap-9 justify-around">
         <img src="./assets/images/bg-quotes.png" alt="" class="absolute -top-8 left-8">
-        <div class="px-6 py-8 bg-testimonial-bg z-50 relative rounded max-w-md shadow-testimonial hover:shadow-testimonial-hv hover:-translate-x-2 hover:-translate-y-2
+        <blockquote class="px-6 py-8 bg-testimonial-bg z-50 relative rounded max-w-sm shadow-testimonial hover:shadow-testimonial-hv hover:-translate-x-2 hover:-translate-y-2
         transition-all duration-300">
-          <p class="opacity-90 text-white text-sm leading-6 text-left">Fylo has improved our team productivity by an
+          <p class="opacity-90 text-white text-sm md:text-base leading-6 text-left">Fylo has improved our team
+            productivity by an
             order of magnitude. Since making the switch our team has
             become a well-oiled collaboration machine.</p>
           <div class="flex justify-start gap-x-4 items-center pt-5">
@@ -134,10 +144,11 @@
               <small class="text-xs text-white opacity-90">Founder & CEO, Huddle</small>
             </div>
           </div>
-        </div>
-        <div class="px-6 py-8 bg-testimonial-bg z-50 relative rounded max-w-md shadow-testimonial hover:shadow-testimonial-hv  hover:-translate-x-2 hover:-translate-y-2
+        </blockquote>
+        <blockquote class="px-6 py-8 bg-testimonial-bg z-50 relative rounded max-w-sm shadow-testimonial hover:shadow-testimonial-hv  hover:-translate-x-2 hover:-translate-y-2
         transition-all duration-300">
-          <p class="opacity-90 text-white text-sm leading-6 text-left">Fylo has improved our team productivity by an
+          <p class="opacity-90 text-white text-sm md:text-base leading-6 text-left">Fylo has improved our team
+            productivity by an
             order of magnitude. Since making the switch our team has
             become a well-oiled collaboration machine.</p>
           <div class="flex justify-start gap-x-4 items-center pt-5">
@@ -147,10 +158,11 @@
               <small class="text-xs text-white opacity-90">Founder & CEO, Huddle</small>
             </div>
           </div>
-        </div>
-        <div class="px-6 py-8 bg-testimonial-bg z-50 relative rounded max-w-md shadow-testimonial hover:shadow-testimonial-hv  hover:-translate-x-2 hover:-translate-y-2
+        </blockquote>
+        <blockquote class="px-6 py-8 bg-testimonial-bg z-50 relative rounded max-w-sm shadow-testimonial hover:shadow-testimonial-hv  hover:-translate-x-2 hover:-translate-y-2
         transition-all duration-300">
-          <p class="opacity-90 text-white text-sm leading-6 text-left">Fylo has improved our team productivity by an
+          <p class="opacity-90 text-white text-sm md:text-base leading-6 text-left">Fylo has improved our team
+            productivity by an
             order of magnitude. Since making the switch our team has
             become a well-oiled collaboration machine.</p>
           <div class="flex justify-start gap-x-4 items-center pt-5">
@@ -162,40 +174,41 @@
               <small class="text-xs text-white opacity-90">Founder & CEO, Huddle</small>
             </div>
           </div>
-        </div>
+        </blockquote>
       </div>
       <div class="px-6 flex justify-center">
         <form id="form" novalidate
-          class="flex flex-col text-center px-6 py-9 bg-main-bg shadow-form w-full max-w-3xl rounded translate-y-1/2 mx-auto">
+          class="flex flex-col text-center px-6 pt-9 pb-4 md:pb-9 bg-main-bg shadow-form w-full max-w-3xl rounded translate-y-1/2 mx-auto">
           <p class="font-raleway font-bold text-white text-lg md:text-3xl">Get early access today</p>
-          <p class="py-5 text-white text-sm opacity-90">It only takes a minute to sign up and our free starter tier is
+          <p class="py-5 md:px-10 text-white text-sm md:text-base opacity-90">It only takes a minute to sign up and our
+            free starter tier is
             extremely generous. If you have any
             questions, our support team would be happy to help you.</p>
-          <div class="flex flex-col items-center md:flex-row gap-5">
+          <div class="flex flex-col items-center md:flex-row gap-5 relative">
             <input type="email" id="input-email" placeholder="email@example.com" class="inline-block outline-0 border-0 rounded-full
             w-full py-3 pl-6 text-sm" autocomplete="email">
             <button type="submit" class="inline-block w-full text-white bg-cyan py-3 max-w-[200px] rounded-full bg-btn-gradient
             font-bold text-sm hover:bg-btn-gradient-hv">Get Started For Free</button>
+            <small id="email-verification-msg" class="text-left opacity-0 h-3 transition-all md:flex-none
+            md:absolute -bottom-3 left-0"></small>
           </div>
-          <small id="email-verification-msg" class="text-left opacity-0 h-3 mt-1 transition-all"></small>
         </form>
       </div>
     </div>
   </main>
   <footer class="bg-footer-bg pt-52 pb-20">
     <div class="container mx-auto">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-5 lg:justify-between gap-x-6 gap-y-10 px-6 pt-14  md:pt-11 lg:pt-20">
+      <div class="grid grid-cols-1 lg:grid-cols-5 lg:justify-between gap-x-6 gap-y-10 px-6 pt-14  md:pt-11 lg:pt-20">
         <div class="lg:col-start-1 relative">
           <img src="./assets/images/logo.svg" alt="logo" class="mb-8 lg:absolute lg:left-0 lg:-top-3/4">
-          <div class="flex text-white opacity-90 text-sm">
+          <div class="flex text-white opacity-90 text-sm md:text-base">
             <i class="fa-solid fa-location-dot inline-block mr-7 translate-y-2"></i>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua</p>
           </div>
         </div>
         <div>
-          <ul class="flex flex-col gap-y-4 lg:items-center text-white opacity-90 text-sm">
+          <ul class="flex flex-col gap-y-4 lg:items-center text-white opacity-90 text-sm md:text-base">
             <li>
               <i class="fa-solid fa-phone-volume text-white mr-5"></i>
               +1-543-123-4567
@@ -207,7 +220,7 @@
           </ul>
         </div>
         <div class="flex lg:justify-center">
-          <ul class="flex flex-col gap-y-4 text-white opacity-90 text-sm">
+          <ul class="flex flex-col gap-y-4 text-white opacity-90 text-sm md:text-base">
             <li><a href="#" class="hover:underline">About Us</a></li>
             <li><a href="#" class="hover:underline">Jobs</a></li>
             <li><a href="#" class="hover:underline">Press</a></li>
@@ -215,23 +228,20 @@
           </ul>
         </div>
         <div class="flex lg:justify-center">
-          <ul class="flex flex-col gap-y-4 text-white opacity-90 text-sm">
+          <ul class="flex flex-col gap-y-4 text-white opacity-90 text-sm md:text-base">
             <li><a href="#" class="hover:underline">Contact Us</a></li>
             <li><a href="#" class="hover:underline">Terms</a></li>
             <li><a href="#" class="hover:underline">Privacy</a></li>
           </ul>
         </div>
         <div>
-          <ul class="flex gap-x-6 justify-center text-white opacity-90 text-sm">
-            <li class="w-9 h-9 rounded-full border border-white grid place-items-center hover:text-cyan hover:border-cyan
-            transition-all cursor-pointer"><i
-                class="fa-brands fa-facebook"></i></li>
-            <li class="w-9 h-9 rounded-full border border-white grid place-items-center hover:text-cyan hover:border-cyan
-            transition-all cursor-pointer"><i
-                class="fa-brands fa-instagram"></i></li>
-            <li class="w-9 h-9 rounded-full border border-white grid place-items-center hover:text-cyan hover:border-cyan
-            transition-all cursor-pointer"><i
-                class="fa-brands fa-twitter"></i></li>
+          <ul class="flex gap-x-6 justify-center text-white opacity-90 text-sm md:text-sm">
+            <li class="w-9 h-9 md:w-11 md:h-11 rounded-full border border-white grid place-items-center hover:text-cyan hover:border-cyan
+            transition-all cursor-pointer"><i class="fa-brands fa-facebook"></i></li>
+            <li class="w-9 h-9 md:w-11 md:h-11 rounded-full border border-white grid place-items-center hover:text-cyan hover:border-cyan
+            transition-all cursor-pointer"><i class="fa-brands fa-instagram"></i></li>
+            <li class="w-9 h-9 md:w-11 md:h-11 rounded-full border border-white grid place-items-center hover:text-cyan hover:border-cyan
+            transition-all cursor-pointer"><i class="fa-brands fa-twitter"></i></li>
           </ul>
         </div>
       </div>
