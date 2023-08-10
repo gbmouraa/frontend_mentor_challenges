@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/calculator_app](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/calculator_app)
+- Live Site URL: [https://gbmoura-calculator-app.netlify.app/](https://gbmoura-calculator-app.netlify.app/)
 
 ### Built with
 
