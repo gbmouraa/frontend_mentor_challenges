@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/app.js" defer></script>
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+  <title>Calculator</title>
+</head>
+
+<body class="theme-1" theme>
+  <div class="container">
+    <div class="theme-selection-container theme-1" theme>
+      <p>calc</p>
+      <div class="theme-selection theme-1" theme>
+        <div>THEME</div>
+        <div class="selection theme-1" theme>
+          <div class="options theme-1" theme>
+            <label for="theme-1">1</label>
+            <label for="theme-2">2</label>
+            <label for="theme-3">3</label>
+          </div>
+          <div class="input-theme theme-1" theme>
+            <input type="radio" name="theme" id="theme-1" checked>
+            <input type="radio" name="theme" id="theme-2">
+            <input type="radio" name="theme" id="theme-3">
+            <span class="selector" theme></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calculator-display theme-1" theme>
+      <input type="text" id="display" theme>
+    </div>
+    <table class="calculator-container theme-1" theme>
+      <tbody class="calulator theme-1" theme>
+        <tr>
+          <td class="btn-num theme-1" theme>7</td>
+          <td class="btn-num theme-1" theme>8</td>
+          <td class="btn-num theme-1" theme>9</td>
+          <td class="btn-del theme-1" theme>DEL</td>
+        </tr>
+        <tr>
+          <td class="btn-num theme-1" theme>4</td>
+          <td class="btn-num theme-1" theme>5</td>
+          <td class="btn-num theme-1" theme>6</td>
+          <td class="btn-num theme-1" theme>+</td>
+        </tr>
+        <tr>
+          <td class="btn-num theme-1" theme>1</td>
+          <td class="btn-num theme-1" theme>2</td>
+          <td class="btn-num theme-1" theme>3</td>
+          <td class="btn-num theme-1" theme>-</td>
+        </tr>
+        <tr>
+          <td class="btn-num theme-1" theme>.</td>
+          <td class="btn-num theme-1" theme>0</td>
+          <td class="btn-num theme-1" theme>/</td>
+          <td class="btn-num theme-1" theme>x</td>
+        </tr>
+        <tr>
+          <td class="btn-reset theme-1" theme>RESET</td>
+          <td class="btn-equal theme-1" theme>=</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
