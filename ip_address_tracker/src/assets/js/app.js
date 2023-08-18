@@ -1,14 +1,17 @@
-const ipAddress = document.querySelector('#ip-address')
-const ipLocation = document.querySelector('#location')
-const timezone = document.querySelector('#timezone')
-const isp = document.querySelector('#isp')
+const ipAddressInputEl = document.querySelector('#address-input')
+const ipAddressEl = document.querySelector('#ip-address')
+const ipLocationEl = document.querySelector('#location')
+const timezoneEl = document.querySelector('#timezone')
+const ispEl = document.querySelector('#isp')
 
 const form = document.querySelector('#form')
-const ipContent = document.querySelector('#ip-content')
+const ipContentEl = document.querySelector('#ip-content')
+
 const mapContainer = document.querySelector('#map')
 let map;
 
-const getApiAddress = async (ip) => {
+// this function is to search for the ip entered in the form
+const getUserIpAddress = async (ip) => {
   try {
     const response = await fetch('https://geo.ipify.org/api/v2/country,city?apiKey=at_8Xb1FNkFbIZY8bCGNoBSjfBlUK0jq&ipAddress=' + ip)
     const data = await response.json()
@@ -18,39 +21,46 @@ const getApiAddress = async (ip) => {
     showIpInfo(data)
     showMap(lat, lng)
     showError(false)
+    preLoading(false)
   } catch (e) {
     showError(true)
+    preLoading(true)
   }
 }
 
 const showError = (arg) => {
-  const errorEl = document.querySelector('#error')
   if (arg) {
-    errorEl.classList.remove('hidden')
-    errorEl.classList.add('block')
+    ipAddressInputEl.value = ''
+    ipAddressInputEl.setAttribute('placeholder', 'Invalid IP Address')
+    ipAddressInputEl.classList.add('bg-red-200', 'ring-1', 'ring-inset', 'ring-red-500')
     return
   }
-  errorEl.classList.add('hidden')
-  errorEl.classList.remove('block')
+
+  ipAddressInputEl.classList.remove('bg-red-200', 'ring-1', 'ring-inset', 'ring-red-500', 'text-red-500')
+  ipAddressInputEl.setAttribute('placeholder', 'Search for any IP addres or domain')
 }
 
 const showIpInfo = data => {
-
-  if (ipContent.classList.contains('hidden')) {
-    ipContent.classList.add('flex')
-    ipContent.classList.remove('hidden')
+  if (ipContentEl.classList.contains('hidden')) {
+    ipContentEl.classList.add('flex')
+    ipContentEl.classList.remove('hidden')
   }
 
-  ipAddress.innerHTML = data.ip
-  ipLocation.innerText = `${data.location.city}, ${data.location.region}`
-  timezone.innerHTML = `UTC${data.location.timezone}`
-  isp.innerHTML = data.isp
+  ipAddressEl.innerHTML = data.ip
+  ipLocationEl.innerText = `${data.location.city}, ${data.location.region}`
+  timezoneEl.innerHTML = `UTC${data.location.timezone}`
+  ispEl.innerHTML = data.isp
 }
 
 const showMap = (lat, lng) => {
-  if (map != undefined) map.remove()
+  if (map !== undefined) map.remove()
+  if (mapContainer.classList.contains('opacity-50')) {
+    mapContainer.classList.remove('opacity-50')
+  }
 
   map = L.map(mapContainer).setView([lat, lng], 12)
+  map.zoomControl.remove()
+
   let mapIcon = L.icon({
     iconUrl: './assets/images/icon-location.svg',
     iconSize: [40, 50],
@@ -61,28 +71,42 @@ const showMap = (lat, lng) => {
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '© OpenStreetMap'
+    attribution: '© OpenStreetMap',
   }).addTo(map);
-
 }
 
-const getUserIp = async (callback) => {
+// this function will get the user's ip when he accesses the page
+const getInitialUserIp = async (callback) => {
   const reponse = await fetch('https://api.ipify.org?format=json')
   const data = await reponse.json()
   const ip = data.ip
   callback(ip)
 }
 
-getUserIp(function (ipAddress) {
+getInitialUserIp(function (ipAddress) {
   if (ipAddress) {
-    getApiAddress(ipAddress)
+    getUserIpAddress(ipAddress)
+    preLoading(false)
   }
 })
 
+const preLoading = (arg) => {
+  const loading = document.querySelector('#loading')
+  if (arg) {
+    loading.classList.add('block')
+    loading.classList.remove('hidden')
+    return
+  }
+  loading.classList.add('hidden')
+  loading.classList.remove('block')
+}
+
 form.addEventListener('submit', (e) => {
   e.preventDefault()
-  const inputIP = document.querySelector('#address-input')
-  const ip = inputIP.value.trim()
+  const ip = ipAddressInputEl.value.trim()
 
-  getApiAddress(ip)
+  preLoading(true)
+  mapContainer.classList.add('opacity-50')
+  getUserIpAddress(ip)
+
 })

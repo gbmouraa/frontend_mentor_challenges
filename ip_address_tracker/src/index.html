@@ -20,38 +20,40 @@
 <body class="font-rubik bg-zinc-200">
   <div class="bg-header-mobile md:bg-header-desktop bg-no-repeat bg-cover h-72">
     <header class="container mx-auto flex flex-col justify-center text-center pt-6 lg:pt-10">
-      <h1 class="text-white font-bold text-2xl md:text-3xl">IP Address Tracker</h1>
+      <h1 class="text-white font-medium text-2xl md:text-3xl">IP Address Tracker</h1>
     </header>
     <form class="flex mt-5 max-w-lg px-6 md:px-0 mx-auto" id="form">
-      <input type="text" id="address-input" placeholder="Search for any IP addres or domain" class="flex-grow inline-block h-12 rounded-l-xl pl-5 text-sm md:text-base text-black
+      <input type="text" id="address-input" placeholder="Search for any IP addres or domain" class="flex-grow inline-block h-14 rounded-l-xl pl-5 text-sm md:text-base text-black
       outline-0 cursor-pointer">
-      <button type="submit" class="bg-black h-12 w-14 bg-search-icon bg-no-repeat bg-center
-      rounded-r-xl hover:bg-zinc-800"></button>
+      <button type="submit" class="bg-black h-14 w-14 bg-search-icon bg-no-repeat bg-center
+      rounded-r-xl hover:bg-zinc-800 -translate-x-[1px]"></button>
     </form>
-    <span
-      class="mx-auto mt-3 md:text-lg font-medium text-red-700 text-center bg-red-400 py-2 px-7 w-fit rounded-xl hidden"
-      id="error">Invalid IP Address, please try again</span>
   </div>
   <main>
     <div class="px-6 lg:px-0 justify-center relative z-10 hidden" id="ip-content">
       <div
-        class="bg-white flex flex-col md:flex-row text-center md:justify-around rounded-xl w-[calc(100%-48px)] max-w-5xl py-5 md:py-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow">
+        class="bg-white flex flex-col md:flex-row text-center md:justify-around rounded-xl w-[calc(100%-48px)] max-w-5xl py-5 md:py-8 md:px-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow">
         <div class="mb-4 md:mb-0 md:w-1/4 md:text-left md:px-6 md:border-r-2 border-gray-300">
-          <p class="uppercase text-[10px] md:text-sm tracking-wider text-gray-400 font-bold mb-1">Ip Addrress</p>
-          <p id="ip-address" class="font-bold text-lg md:text-2xl break-words"></p>
+          <p class="uppercase text-[10px] md:text-sm tracking-widest text-gray-400 font-bold mb-1">Ip Addrress</p>
+          <p id="ip-address" class="font-medium text-lg md:text-2xl break-words"></p>
         </div>
         <div class="mb-4 md:mb-0 md:w-1/4 md:text-left md:px-6 md:border-r-2 border-gray-300">
-          <p class="uppercase text-[10px] md:text-sm tracking-wider text-gray-400 font-bold mb-1">Location</p>
-          <p id="location" class="font-bold text-lg md:text-2xl break-words"></p>
+          <p class="uppercase text-[10px] md:text-sm tracking-widest text-gray-400 font-bold mb-1">Location</p>
+          <p id="location" class="font-medium text-lg md:text-2xl break-words"></p>
         </div>
         <div class="mb-4 md:mb-0 md:w-1/4 md:text-left md:px-6 md:border-r-2 border-gray-300">
-          <p class="uppercase text-[10px] md:text-sm tracking-wider text-gray-400 font-bold mb-1">Timezone</p>
-          <p id="timezone" class="font-bold text-lg md:text-2xl break-words"></p>
+          <p class="uppercase text-[10px] md:text-sm tracking-widest text-gray-400 font-bold mb-1">Timezone</p>
+          <p id="timezone" class="font-medium text-lg md:text-2xl break-words"></p>
         </div>
         <div class=" md:w-1/4 md:text-left md:px-6">
-          <p class="uppercase text-[10px] md:text-sm tracking-wider text-gray-400 font-bold mb-1">Isp</p>
-          <p id="isp" class="font-bold text-lg md:text-2xl break-words"></p>
+          <p class="uppercase text-[10px] md:text-sm tracking-widest text-gray-400 font-bold mb-1">Isp</p>
+          <p id="isp" class="font-medium text-lg md:text-2xl break-words"></p>
         </div>
+      </div>
+    </div>
+    <div id="loading" class="flex justify-center items-center z-50 absolute top-1/2 w-full">
+      <div
+        class="w-32 h-32 bg-transparent border-zinc-400 border-dotted border-l-[8px] border-t-[8px] border-r-[8px] border-r-transparent rounded-full  animate-spin ease-out duration-300">
       </div>
     </div>
     <div id="map" class="h-[720px] z-0">
