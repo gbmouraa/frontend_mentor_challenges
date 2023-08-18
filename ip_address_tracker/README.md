@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/ip_address_tracker](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/ip_address_tracker)
+- Live Site URL: [https://gbmoura-ip-address-tracker.netlify.app/](https://gbmoura-ip-address-tracker.netlify.app/)
 - Linkedin: [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
 - Frontend Mentor [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
 
