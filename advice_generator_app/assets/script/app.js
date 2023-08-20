@@ -21,7 +21,6 @@ const generateNewAdvice = async () => {
 
     renderAdvice(advice)
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-    fetchBtn.addEventListener('click', generateNewAdvice)
-})
+ 
+fetchBtn.addEventListener('click', generateNewAdvice)
+generateNewAdvice()

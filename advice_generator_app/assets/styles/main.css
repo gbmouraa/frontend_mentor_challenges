@@ -29,6 +29,16 @@ body{
     padding: 0 1.6rem;
 }
 
+@keyframes spiner {
+    0%{
+        rotate: (0deg);
+    }50%{
+        rotate: (180deg);
+    }100%{
+        rotate: 360deg;
+    }
+}
+
 .advice-container{
     background: var(--dark-grayish-blue);
     border-radius: .8rem;
@@ -87,4 +97,10 @@ body{
 
 .advice-generator__btn:hover > img {
     transform: rotate(220deg);
+    animation: spiner 1s infinite linear;
+}
+
+.advice-generator__btn > img {
+    transform: rotate(220deg);
+    animation: spiner 2s infinite linear;
 }
