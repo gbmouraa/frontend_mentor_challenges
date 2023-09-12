@@ -14,11 +14,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/testimonials](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/testimonials)
+- Live Site URL: [https://gbmoura-testimonials.netlify.app/](https://gbmoura-testimonials.netlify.app/)
 
 ## Author
 
 - Frontend Mentor - [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
 - Linkedin - [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
-
