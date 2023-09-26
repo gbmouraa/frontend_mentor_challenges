@@ -1,49 +1,42 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const theme = localStorage.getItem('theme')
+  if (theme){
+    const input = document.querySelector(`#${theme}`)
+    input.setAttribute('checked', 'true')
+    changeTheme(theme)
+  } 
+})
+
 const selectTheme = () => {
   const theme1 = document.querySelector('#theme-1')
   const theme2 = document.querySelector('#theme-2')
   const theme3 = document.querySelector('#theme-3')
 
+  let theme = localStorage.getItem('theme')
+
   if (theme1.checked) {
-    changeTheme(1)
-    return
+    theme = 'theme-1'
+  } else if (theme2.checked) {
+    theme = 'theme-2'
+  } else if (theme3.checked) {
+    theme = 'theme-3'
   }
-  if (theme2.checked) {
-    changeTheme(2)
-    return
-  }
-  if (theme3.checked) {
-    changeTheme(3)
-    return
-  }
+
+  changeTheme(theme)
+  localStorage.setItem('theme', theme)
 }
 
 const changeTheme = (theme) => {
   const elements = document.querySelectorAll('[theme]')
 
-  if (theme === 1) {
-    elements.forEach(el => {
-      el.classList.add('theme-1')
-      el.classList.remove('theme-2', 'theme-3')
-    })
-    return
-  }
-
-  if (theme === 2) {
-    elements.forEach(el => {
-      el.classList.add('theme-2')
-      el.classList.remove('theme-1', 'theme-3')
-    })
-    return
-  }
-
-  if (theme === 3) {
-    elements.forEach(el => {
-      el.classList.add('theme-3')
-      el.classList.remove('theme-2', 'theme-1')
-    })
-    return
-  }
+  elements.forEach(el => {
+    el.classList.remove('theme-1', 'theme-2', 'theme-3')
+    el.classList.add(String(theme))
+  })
 }
+
+const inputTheme = document.querySelector('.input-theme')
+inputTheme.addEventListener('click', selectTheme)
 
 function Calculator() {
   this.display = document.querySelector('#display')
@@ -114,9 +107,6 @@ function Calculator() {
   }
 
 }
-
-const inputTheme = document.querySelector('.input-theme')
-inputTheme.addEventListener('click', selectTheme)
 
 const initCalc = new Calculator()
 initCalc.start()
