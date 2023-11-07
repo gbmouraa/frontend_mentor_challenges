@@ -1,15 +1,15 @@
-# Frontend Mentor - IP address tracker solution
+# Frontend Mentor - IP address tracker 
 
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
+Essa é uma solução para o [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
 
-### The challenge
+### O desafio 💻
 
-Users should be able to:
+Os usuários devem ser capazes de:
 
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See their own IP address on the map on the initial page load
-- Search for any IP addresses or domains and see the key information and location
+- Ver o layout ideal para o componente em função do tamanho do ecrã do seu dispositivo
+- Ver os estados de hover de todos os elementos interativos da página
+- Ver seu próprio endereço IP no mapa no carregamento inicial da página
+- Pesquise qualquer endereço IP ou domínio e veja as principais informações e o local
 
 ### Screenshot
 
@@ -17,12 +17,17 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/ip_address_tracker](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/ip_address_tracker)
-- Live Site URL: [https://gbmoura-ip-address-tracker.netlify.app/](https://gbmoura-ip-address-tracker.netlify.app/)
-- Linkedin: [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
-- Frontend Mentor [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
+- **Reposítorio URL**: [https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/ip_address_tracker](https://github.com/gbmouraa/frontend_mentor_challenges/tree/main/ip_address_tracker)
+- **Live Site URL**: [https://gbmoura-ip-address-tracker.netlify.app/](https://gbmoura-ip-address-tracker.netlify.app/)
 
-### Built with
+### Tecnologias Utilizadas :rocket:
 
-- Tailwindcss
-- Javascript
+- **HTML**: Linguagem de marcação usada para criar e estruturar conteúdo em páginas web, usando tags para definir e organizar elementos como texto, imagens e links.
+- **Tailwind CSS**: Um framework CSS que oferece várias classes para utilização já pré-estilizadas.
+- **Javascript**:  Linguagem de programação utilizada para tornar as páginas web interativas, permitindo a manipulação dinâmica de conteúdo, interações do usuário e comportamento da página
+
+## Autor
+
+- **Portfólio** - [Gabriel Moura](https://gmouradev.netlify.app/)
+- **Frontend Mentor** - [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
+- **Linkedin** - [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
